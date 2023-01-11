@@ -11,7 +11,7 @@ export const Navbar: FC = () => {
     <nav
       className={`${
         darkMode ? "bg-stone-900 text-stone-50" : "bg-stone-100"
-      } flex flex-row justify-around p-6 text-lg mb-8`}
+      } flex flex-row w-full justify-around p-6 text-lg mb-8`}
     >
       <ul className="flex justify-between w-48">
         <li>
@@ -21,7 +21,7 @@ export const Navbar: FC = () => {
           <button>let's connect</button>
         </li>
       </ul>
-      <div className="flex space-x-8 -z-50">
+      <div className="flex space-x-8 ">
         <button onClick={handleClick}>dark</button>
         <button>EN</button>
       </div>
