@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { DarkModeProvider } from "./Context/DarkMode";
-import { Navbar } from "./Header/Navbar";
+import { Header } from "./Header/Header";
 import "./App.css";
 
 function App() {
   return (
     <div>
       <DarkModeProvider>
-        <Navbar />
+        <Header />
       </DarkModeProvider>
     </div>
   );

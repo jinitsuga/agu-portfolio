@@ -3,7 +3,6 @@ import { DarkModeContext } from "../Context/DarkMode";
 
 export const Navbar: FC = () => {
   const { darkMode, toggleDarkMode } = React.useContext(DarkModeContext);
-  console.log(darkMode);
 
   const handleClick = () => {
     toggleDarkMode();
@@ -11,14 +10,18 @@ export const Navbar: FC = () => {
   return (
     <nav
       className={`${
-        darkMode ? "bg-slate-800 text-slate-50" : "bg-teal-100"
-      } flex flex-row justify-around p-4`}
+        darkMode ? "bg-stone-900 text-stone-50" : "bg-stone-100"
+      } flex flex-row justify-around p-6 text-lg mb-8`}
     >
-      <ul className="flex between">
-        <li>back top</li>
-        <li>let's connect</li>
+      <ul className="flex justify-between w-48">
+        <li>
+          <button>back top</button>
+        </li>
+        <li>
+          <button>let's connect</button>
+        </li>
       </ul>
-      <div className="flex space-x-8">
+      <div className="flex space-x-8 -z-50">
         <button onClick={handleClick}>dark</button>
         <button>EN</button>
       </div>
