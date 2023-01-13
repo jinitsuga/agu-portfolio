@@ -12,7 +12,7 @@ export const Info: FC = () => {
     >
       <div className="flex flex-col p-6 text-xl w-96  z-10">
         <p>
-          Hey there! I'm Agu, front-end developer. Interested in scalable code,
+          Hey there! I'm Agu, front-end developer interested in scalable code,
           accesibility, UX, and React. Probably diving into some code as you
           read this, or having fun outdoors!
         </p>
