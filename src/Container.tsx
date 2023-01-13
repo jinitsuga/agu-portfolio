@@ -9,7 +9,11 @@ export const Container: FC = () => {
   const { darkMode } = useContext(DarkModeContext);
 
   return (
-    <div className={`${darkMode ? "bg-stone-900" : "bg-stone-100"} h-screen`}>
+    <div
+      className={`${
+        darkMode ? "bg-stone-900" : "bg-stone-100"
+      } h-screen flex flex-col`}
+    >
       <Header />
       <Projects />
     </div>

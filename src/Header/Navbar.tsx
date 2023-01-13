@@ -13,7 +13,7 @@ export const Navbar: FC = () => {
         darkMode ? "bg-stone-900 text-stone-50 border-stone-50" : "bg-stone-100"
       } flex flex-row w-full justify-around items-center p-6 text-lg mb-8 border-b-2 border-stone-400`}
     >
-      <ul className="flex justify-between w-48">
+      <ul className="flex gap-8 justify-between w-62">
         <li>
           <button
             className={`border-b-2 border-transparent ${

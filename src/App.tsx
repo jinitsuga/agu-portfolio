@@ -4,7 +4,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="bg-stone-100 h-screen">
+    <div className="">
       <DarkModeProvider>
         <Container />
       </DarkModeProvider>
