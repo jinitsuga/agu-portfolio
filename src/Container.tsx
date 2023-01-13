@@ -1,0 +1,14 @@
+import React, { FC, useContext } from "react";
+import { Header } from "./Header/Header";
+import { DarkModeContext } from "./Context/DarkMode";
+// contains every app component before sending to App.tsx
+
+export const Container: FC = () => {
+  const { darkMode } = useContext(DarkModeContext);
+
+  return (
+    <div className={`${darkMode ? "bg-stone-900" : "bg-stone-100"} h-screen`}>
+      <Header />
+    </div>
+  );
+};

@@ -1,5 +1,7 @@
 import React, { FC } from "react";
 
+// Context to hold dark mode state
+
 const DarkModeContext = React.createContext<any>(null);
 
 interface Props {
