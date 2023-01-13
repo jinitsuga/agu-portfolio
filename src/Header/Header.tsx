@@ -4,7 +4,7 @@ import { Info } from "./Info";
 
 const Header: FC = () => {
   return (
-    <header className="flex flex-col items-center justify-center">
+    <header className="flex flex-col items-center justify-center mb-12">
       <Navbar />
       <Info />
     </header>

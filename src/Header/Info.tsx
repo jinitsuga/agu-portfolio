@@ -16,7 +16,27 @@ export const Info: FC = () => {
           accesibility, UX, and React. Probably diving into some code as you
           read this, or having fun outdoors!
         </p>
-        <span className="justify-self-center self-center m-4">linkslol</span>
+        <ul className="flex flex-row gap-4 justify-self-center text-3xl  self-center m-4">
+          <li className="text-3xl text-stone-50">
+            <a target="_blank" href="https://github.com/jinitsuga">
+              {darkMode ? (
+                <i className="devicon-github-original"></i>
+              ) : (
+                <i className="devicon-github-original colored"></i>
+              )}
+            </a>
+          </li>
+          <li>
+            {" "}
+            <a target="_blank" href="https://github.com/jinitsuga">
+              {darkMode ? (
+                <i className="devicon-linkedin-plain colored"></i>
+              ) : (
+                <i className="devicon-linkedin-plain"></i>
+              )}
+            </a>
+          </li>
+        </ul>
       </div>
       <img className="bg-slate-600 w-64 h-64 rounded -ml-20"></img>
     </section>
