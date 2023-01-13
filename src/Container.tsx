@@ -1,7 +1,8 @@
 import React, { FC, useContext } from "react";
 import { Header } from "./Header/Header";
 import { DarkModeContext } from "./Context/DarkMode";
-// contains every app component before sending to App.tsx
+
+// contains every app component before sending to App.tsx (so State can be initiated and style accordingly)
 
 export const Container: FC = () => {
   const { darkMode } = useContext(DarkModeContext);
