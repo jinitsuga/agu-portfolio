@@ -1,5 +1,6 @@
 import React from "react";
 import { DarkModeContext } from "../Context/DarkMode";
+import { Project } from "./Project";
 
 export const Projects = () => {
   const { darkMode } = React.useContext(DarkModeContext);

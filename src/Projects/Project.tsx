@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { DarkModeContext } from "../Context/DarkMode";
 
 interface Props {
-  img: string;
+  img: any;
   name: string;
   code: string;
   description: string;
