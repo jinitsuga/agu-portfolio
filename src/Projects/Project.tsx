@@ -3,6 +3,7 @@ import { DarkModeContext } from "../Context/DarkMode";
 
 interface Props {
   img: any;
+  tools: string;
   name: string;
   code: string;
   description: string;
