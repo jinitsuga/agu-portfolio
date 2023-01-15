@@ -7,7 +7,7 @@ export const Info: FC = () => {
   return (
     <section
       className={`${
-        darkMode ? "bg-stone-900 text-stone-50" : "bg-stone-100"
+        darkMode ? "bg-stone-800 text-stone-50" : "bg-stone-100"
       } flex flex-row w-2/4 justify-around`}
     >
       <div className="flex flex-col p-6 text-xl w-96  z-10">

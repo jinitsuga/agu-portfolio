@@ -10,13 +10,27 @@ interface Props {
   live: string;
 }
 
-export const Project: FC<Props> = ({ img, name, code, live, description }) => {
+export const Project: FC<Props> = ({
+  img,
+  name,
+  code,
+  live,
+  description,
+  tools,
+}) => {
   const { darkMode } = React.useContext(DarkModeContext);
 
   return (
-    <div className="flex flex-col items-center justify-center p-4 hover:shadow-md hover:shadow-stone-900">
+    <div
+      className={`flex flex-col items-center justify-center p-4 ${
+        darkMode
+          ? "hover:shadow-md hover:shadow-stone-100"
+          : "hover:shadow-md hover:shadow-stone-900"
+      }`}
+    >
       <h4 className="mb-2 text-xl">{name}</h4>
       <img className="max-w-[300px] max-h-[200px] mb-2" src={img}></img>
+      <span className="m-1">{tools}</span>
       <span className="max-w-[350px]">{description}</span>
       <ul className="flex gap-4 mt-2 text-xl">
         <li>

@@ -14,15 +14,6 @@ const projectsInfo: Array<any> = [
     live: "https://peka.ares.uy/",
   },
   {
-    name: "Hidden objects - PoE",
-    img: poe,
-    tools: "React, HTML&CSS, firebase",
-    code: "https://github.com/jinitsuga/find-me",
-    description:
-      "Hidden objects game, where the user needs to find Path of Exile items. Leaderboard for keeping score of the fastest finders!",
-    live: "https://onechaos.netlify.app/",
-  },
-  {
     name: "Talents share",
     img: talents,
     tools: "Typescript, React, TailwindCSS,",
@@ -31,6 +22,16 @@ const projectsInfo: Array<any> = [
       "App to create, save, and share lists of 'talent builds' with other players in World of Warcraft. Unlimited number of builds. No need to register, quick and easy to use.",
     live: "https://share-talents.netlify.app/",
   },
+  {
+    name: "Hidden objects - PoE",
+    img: poe,
+    tools: "React, HTML&CSS, firebase",
+    code: "https://github.com/jinitsuga/find-me",
+    description:
+      "Hidden objects game, where the user needs to find Path of Exile items. Leaderboard for keeping score of the fastest finders!",
+    live: "https://onechaos.netlify.app/",
+  },
+
   {
     name: "Memes Store",
     img: memes,

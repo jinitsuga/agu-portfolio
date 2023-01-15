@@ -21,11 +21,15 @@ export const Projects = () => {
   });
 
   return (
-    <section className="flex flex-col justify-center items-center">
+    <section
+      className={`${
+        darkMode ? "bg-stone-900" : "bg-stone-200"
+      } flex flex-col justify-center items-center`}
+    >
       <h4
         className={`${
           darkMode ? "text-stone-50" : ""
-        } text-center text-2xl mb-6`}
+        } text-center text-2xl mt-6 mb-6`}
       >
         Some of my projects:
       </h4>
