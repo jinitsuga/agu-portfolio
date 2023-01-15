@@ -1,16 +1,16 @@
-import peka from "./public/images/peka.png";
-import poe from "./public/images/poe.png";
-import talents from "./public/images/talents.png";
-import memes from "./public/images/memes.png";
+import peka from "/images/peka.png";
+import poe from "/images/poe.png";
+import talents from "/images/talents.png";
+import memes from "/images/memes.png";
 
-const projectsInfo: Array<Object> = [
+const projectsInfo: Array<any> = [
   {
     name: "Peka",
     img: peka,
     tools: "React, JS, styled-components, Express",
     code: "https://github.com/jinitsuga/Peka-front",
     description:
-      "Simple network for people that like planting veggies in their gardens to share plants, seeds, trade, and talk about their craft.",
+      "Simple network for people planting in their gardens to share plants, seeds, trade, and talk about their craft.",
     live: "https://peka.ares.uy/",
   },
   {

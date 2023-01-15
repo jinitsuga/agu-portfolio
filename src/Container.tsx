@@ -12,7 +12,7 @@ export const Container: FC = () => {
     <div
       className={`${
         darkMode ? "bg-stone-900" : "bg-stone-100"
-      } h-screen flex flex-col`}
+      } h-100% flex flex-col`}
     >
       <Header />
       <Projects />

@@ -1,9 +1,24 @@
 import React from "react";
 import { DarkModeContext } from "../Context/DarkMode";
 import { Project } from "./Project";
+import { projectsInfo } from "./projectsInfo";
 
 export const Projects = () => {
   const { darkMode } = React.useContext(DarkModeContext);
+
+  const projects = projectsInfo.map((project, index) => {
+    return (
+      <Project
+        key={index}
+        name={project.name}
+        description={project.description}
+        img={project.img}
+        tools={project.tools}
+        live={project.live}
+        code={project.code}
+      />
+    );
+  });
 
   return (
     <section className="flex flex-col justify-center items-center">
@@ -16,9 +31,11 @@ export const Projects = () => {
       </h4>
       <div
         className={`${
-          darkMode ? "border-stone-100" : "border-stone-900"
-        } flex flex-col items-center justify-center w-6/12 border-2 h-12`}
-      ></div>
+          darkMode ? "text-stone-50" : ""
+        } grid gap-4 gap-x-32 grid-cols-2 grid-rows-2  max-w-[60%] p-4`}
+      >
+        {projects}
+      </div>
     </section>
   );
 };
