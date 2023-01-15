@@ -16,7 +16,7 @@ const projectsInfo: Array<any> = [
   {
     name: "Talents share",
     img: talents,
-    tools: "Typescript, React, TailwindCSS,",
+    tools: "Typescript, React, TailwindCSS",
     code: "https://github.com/jinitsuga/share-talents",
     description:
       "App to create, save, and share lists of 'talent builds' with other players in World of Warcraft. Unlimited number of builds. No need to register, quick and easy to use.",

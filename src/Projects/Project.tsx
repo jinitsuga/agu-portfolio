@@ -30,7 +30,7 @@ export const Project: FC<Props> = ({
     >
       <h4 className="mb-2 text-xl">{name}</h4>
       <img className="max-w-[300px] max-h-[200px] mb-2" src={img}></img>
-      <span className="m-1">{tools}</span>
+      <span className="m-1 text-sm">{tools}</span>
       <span className="max-w-[350px]">{description}</span>
       <ul className="flex gap-4 mt-2 text-xl">
         <li>
