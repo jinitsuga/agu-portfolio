@@ -31,7 +31,7 @@ export const Projects = () => {
           darkMode ? "text-stone-50" : ""
         } text-center text-2xl mt-6 mb-6`}
       >
-        Some of my projects:
+        Some of my work:
       </h4>
       <div
         className={`${

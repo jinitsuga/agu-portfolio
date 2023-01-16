@@ -28,7 +28,10 @@ export const Info: FC = () => {
           </li>
           <li>
             {" "}
-            <a target="_blank" href="https://github.com/jinitsuga">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/agu-ib%C3%A1%C3%B1ez-30069a240/"
+            >
               {darkMode ? (
                 <i className="devicon-linkedin-plain colored"></i>
               ) : (

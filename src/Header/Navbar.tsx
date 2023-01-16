@@ -20,15 +20,6 @@ export const Navbar: FC = () => {
               darkMode ? "hover:border-stone-100" : "hover:border-stone-900"
             }`}
           >
-            back top
-          </button>
-        </li>
-        <li>
-          <button
-            className={`border-b-2 border-transparent ${
-              darkMode ? "hover:border-stone-100" : "hover:border-stone-900"
-            }`}
-          >
             let's connect
           </button>
         </li>
