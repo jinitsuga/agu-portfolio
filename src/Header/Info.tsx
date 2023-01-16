@@ -10,7 +10,7 @@ export const Info: FC = () => {
         darkMode ? "bg-stone-800 text-stone-50" : "bg-stone-100"
       } flex flex-row w-2/4 justify-around`}
     >
-      <div className="flex flex-col p-6 text-xl w-96  z-10">
+      <div className="flex flex-col p-6 text-xl w-96  z-5">
         <p>
           Hey there! I'm Agu, front-end developer interested in scalable code,
           accesibility, UX, and React. Probably diving into some code as you

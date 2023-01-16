@@ -10,7 +10,7 @@ const Header: FC = () => {
     <header
       className={` ${
         darkMode ? "bg-stone-800" : ""
-      } flex flex-col items-center justify-center pb-12`}
+      } sticky top-0 flex flex-col items-center justify-center pb-12`}
     >
       <Navbar />
       <Info />

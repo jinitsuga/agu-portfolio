@@ -1,5 +1,7 @@
 import React, { FC, useContext } from "react";
 import { Header } from "./Header/Header";
+import { Navbar } from "./Header/Navbar";
+import { Info } from "./Header/Info";
 import { Projects } from "./Projects/Projects";
 import { DarkModeContext } from "./Context/DarkMode";
 
@@ -12,9 +14,10 @@ export const Container: FC = () => {
     <div
       className={`${
         darkMode ? "bg-stone-900" : "bg-stone-100"
-      } h-100% flex flex-col`}
+      } h-100% flex flex-col items-center justify-center`}
     >
-      <Header />
+      <Navbar />
+      <Info />
       <Projects />
     </div>
   );
