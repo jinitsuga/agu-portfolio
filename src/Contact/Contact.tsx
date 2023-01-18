@@ -41,7 +41,7 @@ export const Contact = () => {
         className="flex flex-col items-center justify-center"
         onSubmit={handleSubmit}
       >
-        <h2 className="m-4 text-2xl">Get in touch</h2>
+        <h2 className="m-4 text-3xl font-bold">Get in touch</h2>
         <label className={`flex flex-col m-2 text-lg`} htmlFor="name">
           Name
           <input
