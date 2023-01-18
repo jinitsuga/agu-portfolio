@@ -13,9 +13,9 @@ export const Info: FC = () => {
       <div className="flex flex-col p-6 text-lg w-96  z-10">
         <p>
           Hey there! Thinking of building a web app or a website? Then I'm your
-          person! Interested in scalable code, accessibility, and UX. Feel free
-          to reach out if you'd like to have something built, or with any
-          questions.
+          person! I like thinking about scalable code, accessibility, and UX.
+          Feel free to reach out if you'd like to have something built, or with
+          any questions.
         </p>
         <ul className="flex flex-row gap-4 justify-self-center text-3xl  self-center m-4">
           <li className="text-3xl text-stone-50">
