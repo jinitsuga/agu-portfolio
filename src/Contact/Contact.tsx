@@ -32,6 +32,7 @@ export const Contact = () => {
 
   return (
     <section
+      id="contact"
       className={`${
         darkMode ? "bg-stone-800 text-stone-50" : "bg-stone-100"
       } flex flex-col justify-center items-center w-screen pb-12 `}

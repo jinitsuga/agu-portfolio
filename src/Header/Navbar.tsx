@@ -15,13 +15,14 @@ export const Navbar: FC = () => {
     >
       <ul className="flex gap-8 justify-between w-62">
         <li>
-          <button
-            className={`border-b-2 border-transparent ${
+          <a
+            href="#contact"
+            className={`border-b-2 border-transparent hover:cursor-pointer ${
               darkMode ? "hover:border-stone-100" : "hover:border-stone-900"
             }`}
           >
             let's connect
-          </button>
+          </a>
         </li>
       </ul>
       <div className="flex space-x-8 ">
