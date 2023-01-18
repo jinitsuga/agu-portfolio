@@ -3,6 +3,7 @@ import { Header } from "./Header/Header";
 import { Navbar } from "./Header/Navbar";
 import { Info } from "./Header/Info";
 import { Projects } from "./Projects/Projects";
+import { Contact } from "./Contact/Contact";
 import { DarkModeContext } from "./Context/DarkMode";
 
 // contains every app component before sending to App.tsx (so State can be initiated and style accordingly)
@@ -19,6 +20,7 @@ export const Container: FC = () => {
       <Navbar />
       <Info />
       <Projects />
+      <Contact />
     </div>
   );
 };
