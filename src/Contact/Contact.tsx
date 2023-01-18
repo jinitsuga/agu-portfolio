@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { send } from "emailjs-com";
 import { DarkModeContext } from "../Context/DarkMode";
+import myImage from "/images/IMG_3629.jpg";
 
 export const Contact = () => {
   const [email, setEmail] = React.useState({
@@ -35,7 +36,7 @@ export const Contact = () => {
       id="contact"
       className={`${
         darkMode ? "bg-stone-800 text-stone-50" : "bg-stone-100"
-      } flex flex-col justify-center items-center w-screen pb-12 `}
+      } flex flex-row justify-center items-center w-screen pb-12 `}
     >
       <form
         className="flex flex-col items-center justify-center"
@@ -45,7 +46,7 @@ export const Contact = () => {
         <label className={`flex flex-col m-2 text-lg`} htmlFor="name">
           Name
           <input
-            className={`p-2 m-1 rounded focus:outline-none focus:ring   ${
+            className={`p-2 m-1 w-80 rounded focus:outline-none focus:ring   ${
               darkMode
                 ? "bg-stone-700 focus:ring-stone-200"
                 : "bg-stone-300 focus:ring-stone-900"
@@ -60,7 +61,7 @@ export const Contact = () => {
         <label className="flex flex-col m-2 text-lg" htmlFor="name">
           Email
           <input
-            className={`p-2 m-1 rounded focus:outline-none focus:ring   ${
+            className={`p-2 m-1 w-80 rounded focus:outline-none focus:ring   ${
               darkMode
                 ? "bg-stone-700 focus:ring-stone-200"
                 : "bg-stone-300 focus:ring-stone-900"
@@ -75,7 +76,7 @@ export const Contact = () => {
         <label className="flex flex-col m-2 text-lg" htmlFor="name">
           Message
           <textarea
-            className={`p-2 m-1 rounded focus:outline-none focus:ring   ${
+            className={`p-2 m-1 w-80 rounded focus:outline-none focus:ring   ${
               darkMode
                 ? "bg-stone-700 focus:ring-stone-200"
                 : "bg-stone-300 focus:ring-stone-900"
