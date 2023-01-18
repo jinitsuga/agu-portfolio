@@ -24,7 +24,7 @@ export const Projects = () => {
     <section
       className={`${
         darkMode ? "bg-stone-900" : "bg-stone-200"
-      } flex flex-col justify-center items-center w-screen`}
+      } flex flex-col justify-center items-center w-screen pb-4`}
     >
       <h4
         className={`${
