@@ -36,7 +36,7 @@ export const Projects = () => {
       <div
         className={`${
           darkMode ? "text-stone-50" : ""
-        } grid gap-4 gap-x-32 grid-cols-2 grid-rows-2  max-w-[60%] p-4`}
+        } grid gap-4 gap-x-32 grid-cols-1 grid-rows-1 xl:grid-cols-2 xl:grid-rows-2  max-w-[60%] p-4`}
       >
         {projects}
       </div>

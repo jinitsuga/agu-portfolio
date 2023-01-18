@@ -19,7 +19,15 @@ export const Info: FC = () => {
         </p>
         <ul className="flex flex-row gap-4 justify-self-center text-3xl  self-center m-4">
           <li className="text-3xl text-stone-50">
-            <a target="_blank" href="https://github.com/jinitsuga">
+            <a
+              className={`${
+                darkMode
+                  ? "p-1 border-b-2 border-transparent hover:border-stone-100"
+                  : "border-b-2 border-transparent hover:border-stone-900"
+              }`}
+              target="_blank"
+              href="https://github.com/jinitsuga"
+            >
               {darkMode ? (
                 <i className="devicon-github-original"></i>
               ) : (
@@ -30,6 +38,11 @@ export const Info: FC = () => {
           <li>
             {" "}
             <a
+              className={`${
+                darkMode
+                  ? "p-1 border-b-2 border-transparent hover:border-stone-100"
+                  : "border-b-2 border-transparent hover:border-stone-900"
+              }`}
               target="_blank"
               href="https://www.linkedin.com/in/agu-ib%C3%A1%C3%B1ez-30069a240/"
             >
