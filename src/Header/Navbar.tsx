@@ -28,7 +28,7 @@ export const Navbar: FC = () => {
               darkMode ? "hover:border-stone-100" : "hover:border-stone-900"
             }`}
           >
-            let's connect
+            {lang == "EN" ? "let's connect" : "conectemos"}
           </a>
         </li>
       </ul>
