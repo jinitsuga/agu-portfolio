@@ -32,9 +32,9 @@ export const Navbar: FC = () => {
           </a>
         </li>
       </ul>
-      <div className="flex space-x-8 ">
+      <div className="flex">
         <button
-          className={`p-2 outline-2 ${
+          className={`p-2 outline-2 mr-6 ${
             darkMode ? "ring-stone-50 hover:ring" : "ring-stone-900 hover:ring"
           }`}
           onClick={handleClick}
@@ -42,14 +42,18 @@ export const Navbar: FC = () => {
           {darkMode ? "light" : "dark"}
         </button>
         <button
-          className="m-1"
+          className={`mr-2 m-2 p-2 ${
+            darkMode ? "ring-stone-50" : "ring-stone-900"
+          }  ${lang == "EN" ? "ring" : ""}`}
           disabled={lang == "EN" ? true : false}
           onClick={changeLanguages}
         >
           EN
         </button>
         <button
-          className={`mr-2 p-2  ${lang == "ES"}`}
+          className={`mr-2 m-2 p-2 ${
+            darkMode ? "ring-stone-50" : "ring-stone-900"
+          }  ${lang == "ES" ? "ring" : ""}`}
           disabled={lang == "ES" ? true : false}
           onClick={changeLanguages}
         >
