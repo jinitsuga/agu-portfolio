@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import { DarkModeContext } from "../Context/DarkMode";
-import myImage from "/images/IMG_3629.jpg";
 
 export const Info: FC = () => {
   const { darkMode } = React.useContext(DarkModeContext);

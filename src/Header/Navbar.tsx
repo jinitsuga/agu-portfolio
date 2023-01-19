@@ -1,8 +1,15 @@
 import React, { FC } from "react";
 import { DarkModeContext } from "../Context/DarkMode";
+import { LanguageContext } from "../Context/Language";
 
 export const Navbar: FC = () => {
   const { darkMode, toggleDarkMode } = React.useContext(DarkModeContext);
+
+  const { lang, switchLang } = React.useContext(LanguageContext);
+
+  const changeLanguages = () => {
+    switchLang();
+  };
 
   const handleClick = () => {
     toggleDarkMode();
@@ -27,14 +34,27 @@ export const Navbar: FC = () => {
       </ul>
       <div className="flex space-x-8 ">
         <button
-          className={`p-2 border-2 border-transparent ${
-            darkMode ? "hover:border-stone-100" : "hover:border-stone-900"
+          className={`p-2 outline-2 ${
+            darkMode ? "ring-stone-50 hover:ring" : "ring-stone-900 hover:ring"
           }`}
           onClick={handleClick}
         >
           {darkMode ? "light" : "dark"}
         </button>
-        <button>EN</button>
+        <button
+          className="m-1"
+          disabled={lang == "EN" ? true : false}
+          onClick={changeLanguages}
+        >
+          EN
+        </button>
+        <button
+          className={`mr-2 p-2  ${lang == "ES"}`}
+          disabled={lang == "ES" ? true : false}
+          onClick={changeLanguages}
+        >
+          ES
+        </button>
       </div>
     </nav>
   );

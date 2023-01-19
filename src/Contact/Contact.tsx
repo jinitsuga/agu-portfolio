@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { send } from "emailjs-com";
 import { DarkModeContext } from "../Context/DarkMode";
-import myImage from "/images/IMG_3629.jpg";
 
 export const Contact = () => {
   const [email, setEmail] = React.useState({
@@ -15,6 +14,8 @@ export const Contact = () => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
+
+    // Form validation here - MISSING
 
     send("service_8mm808s", "template_0dyjgbc", email, "m8Pr21PqFhbht7PhH")
       .then((response) => {
