@@ -29,6 +29,7 @@ export const Contact = () => {
   const { lang } = React.useContext(LanguageContext);
 
   // Using emailJS for enabling users to email me without having to copy my address etc
+  // submit function includes validation for both Spanish and English
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -85,9 +86,12 @@ export const Contact = () => {
         className="flex flex-col items-center justify-center"
         onSubmit={handleSubmit}
       >
-        <h2 className="m-4 text-3xl font-bold">Get in touch</h2>
+        <h2 className="m-4 text-3xl font-bold">
+          {" "}
+          {lang == "EN" ? "Get in touch" : "Escríbeme"}
+        </h2>
         <label className={`flex flex-col m-2 text-lg`} htmlFor="name">
-          Name
+          {lang == "EN" ? "Name" : "Nombre"}
           <input
             minLength={3}
             maxLength={16}
@@ -98,7 +102,7 @@ export const Contact = () => {
             }`}
             name="from"
             type="text"
-            placeholder="Your name..."
+            placeholder={lang == "EN" ? "Your name..." : "Tu nombre..."}
             value={email.from}
             onChange={handleChange}
           />
@@ -113,13 +117,17 @@ export const Contact = () => {
             }`}
             name="from_email"
             type="text"
-            placeholder="Your email so I can get back to you"
+            placeholder={
+              lang == "EN"
+                ? "Your email so I can get back to you"
+                : "Tu email para quedar comunicados"
+            }
             value={email.from_email}
             onChange={handleChange}
           />
         </label>
         <label className="flex flex-col m-2 text-lg" htmlFor="name">
-          Message
+          {lang == "EN" ? "Message" : "Mensaje"}
           <textarea
             maxLength={450}
             minLength={8}
@@ -141,7 +149,7 @@ export const Contact = () => {
           }`}
           type="submit"
         >
-          send
+          {lang == "EN" ? "send" : "enviar"}
         </button>
       </form>
     </section>
