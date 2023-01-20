@@ -2,12 +2,25 @@ import React, { useContext } from "react";
 import { send } from "emailjs-com";
 import { DarkModeContext } from "../Context/DarkMode";
 
+const validationEN = {
+  name: "Your name should have 3-16 characters",
+  email: "Make sure it's a valid email address.",
+  message: "Make sure your message has between 8 and 450 characters!",
+};
+const validationES = {
+  name: "Tu nombre debe tener entre 3 y 16 caracteres.",
+  email: "Asegurate el email es ingresado sea válido.",
+  message: "Tu mensaje debe tener entre 8 y 450 caracteres!",
+};
+
 export const Contact = () => {
   const [email, setEmail] = React.useState({
     from: "",
     message: "",
     from_email: "",
   });
+  const [validationMessage, setValidationMessage] = React.useState<string>("");
+
   const { darkMode } = React.useContext(DarkModeContext);
 
   // Using emailJS for enabling users to email me without having to copy my address etc
@@ -15,7 +28,15 @@ export const Contact = () => {
   const handleSubmit = (e: any) => {
     e.preventDefault();
 
-    // Form validation here - MISSING
+    if (email.from.length < 3 || email.from.length > 16) {
+    }
+
+    if (!email.from_email.match(/[^\s@]+@[^\s@]+\.[^\s@]+/)) {
+      console.log("email doesnt match");
+      setValidationMessage("");
+
+      return;
+    }
 
     send("service_8mm808s", "template_0dyjgbc", email, "m8Pr21PqFhbht7PhH")
       .then((response) => {
@@ -48,7 +69,7 @@ export const Contact = () => {
           Name
           <input
             minLength={3}
-            maxLength={14}
+            maxLength={16}
             className={`p-2 m-1 w-80 rounded focus:outline-none focus:ring   ${
               darkMode
                 ? "bg-stone-700 focus:ring-stone-200"
@@ -79,6 +100,8 @@ export const Contact = () => {
         <label className="flex flex-col m-2 text-lg" htmlFor="name">
           Message
           <textarea
+            maxLength={450}
+            minLength={8}
             className={`p-2 m-1 w-80 rounded focus:outline-none focus:ring   ${
               darkMode
                 ? "bg-stone-700 focus:ring-stone-200"
