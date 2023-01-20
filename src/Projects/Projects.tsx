@@ -2,9 +2,11 @@ import React from "react";
 import { DarkModeContext } from "../Context/DarkMode";
 import { Project } from "./Project";
 import { projectsInfo } from "./projectsInfo";
+import { LanguageContext } from "../Context/Language";
 
 export const Projects = () => {
   const { darkMode } = React.useContext(DarkModeContext);
+  const { lang } = React.useContext(LanguageContext);
 
   const projects = projectsInfo.map((project, index) => {
     return (
@@ -31,7 +33,7 @@ export const Projects = () => {
           darkMode ? "text-stone-50" : ""
         } text-center text-3xl mt-6 mb-6 font-bold`}
       >
-        Some of my work:
+        {lang == "EN" ? "Some of my work:" : "Algunos de mis trabajos:"}
       </h4>
       <div
         className={`${

@@ -6,13 +6,12 @@ export const Info: FC = () => {
   const { darkMode } = React.useContext(DarkModeContext);
   const { lang } = React.useContext(LanguageContext);
 
-  const infoEN = `Hey there! Thinking of building a web app or a website? Then I'm your
-          person! I like thinking about scalable code, accessibility, and UX.
-          Feel free to reach out if you'd like to have something built, or with
-          any other ideas.`;
+  const infoEN = `Hey there! I'm agu. I love learning new concepts and tools by implementation, while thinking about scalable code, accessibility, and UX.
+          Feel free to reach out if you'd like to have something built, talk about code
+          or potentially hire me.`;
 
-  const infoES = `Hola! Pensando en armar un sitio web o un web app? Entonces estás en el lugar correcto. Me gusta pensar en código escalable, accesibilidad, y UX.
-  No dudes en ponerte en contacto si estás queriendo construir algo, o si tienes alguna otra idea.`;
+  const infoES = `Hola! Soy agu. Me encanta aprender nuevos conceptos a través de su implementación, y siempre pensando en código escalable, accesibilidad, y UX.
+  No dudes en ponerte en contacto si estás queriendo construir un sitio, una webapp, hablar de código, o tal vez contratarme!`;
 
   return (
     <section
