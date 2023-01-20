@@ -138,7 +138,7 @@ export const Contact = () => {
                 : "bg-stone-300 focus:ring-stone-900"
             }`}
             name="message"
-            placeholder="Your message"
+            placeholder={lang == "EN" ? "Your message" : "Tu mensaje"}
             value={email.message}
             onChange={handleChange}
           />
