@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { send } from "emailjs-com";
 import { DarkModeContext } from "../Context/DarkMode";
+import { LanguageContext } from "../Context/Language";
 
 const validationEN = {
   name: "Your name should have 3-16 characters",
@@ -19,9 +20,13 @@ export const Contact = () => {
     message: "",
     from_email: "",
   });
+
   const [validationMessage, setValidationMessage] = React.useState<string>("");
 
+  const [emailSent, setEmailSent] = React.useState(false);
+
   const { darkMode } = React.useContext(DarkModeContext);
+  const { lang } = React.useContext(LanguageContext);
 
   // Using emailJS for enabling users to email me without having to copy my address etc
 
@@ -29,11 +34,25 @@ export const Contact = () => {
     e.preventDefault();
 
     if (email.from.length < 3 || email.from.length > 16) {
+      lang == "EN"
+        ? setValidationMessage(validationEN.name)
+        : setValidationMessage(validationES.name);
+
+      return;
     }
 
     if (!email.from_email.match(/[^\s@]+@[^\s@]+\.[^\s@]+/)) {
-      console.log("email doesnt match");
-      setValidationMessage("");
+      lang == "EN"
+        ? setValidationMessage(validationEN.email)
+        : setValidationMessage(validationES.email);
+
+      return;
+    }
+
+    if (email.message.length < 8) {
+      lang == "EN"
+        ? setValidationMessage(validationEN.message)
+        : setValidationMessage(validationES.message);
 
       return;
     }
@@ -45,6 +64,8 @@ export const Contact = () => {
       .catch((err) => {
         console.log("FAILED...", err);
       });
+
+    setEmailSent(true);
   };
 
   const handleChange = (e: any) => {
@@ -114,6 +135,7 @@ export const Contact = () => {
           />
         </label>
         <button
+          disabled={emailSent ? true : false}
           className={`flex items-center justify-center border-2 p-4 h-6 rounded ${
             darkMode ? "" : "bg-stone-900 text-stone-50"
           }`}
