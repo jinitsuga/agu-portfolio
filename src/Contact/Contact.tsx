@@ -47,6 +47,8 @@ export const Contact = () => {
         <label className={`flex flex-col m-2 text-lg`} htmlFor="name">
           Name
           <input
+            minLength={3}
+            maxLength={14}
             className={`p-2 m-1 w-80 rounded focus:outline-none focus:ring   ${
               darkMode
                 ? "bg-stone-700 focus:ring-stone-200"
