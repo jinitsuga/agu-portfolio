@@ -6,12 +6,12 @@ import { LanguageContext } from "../Context/Language";
 const validationEN = {
   name: "Your name should have 3-16 characters",
   email: "Make sure it's a valid email address.",
-  message: "Make sure your message has between 8 and 450 characters!",
+  message: "Please include a message :)",
 };
 const validationES = {
   name: "Tu nombre debe tener entre 3 y 16 caracteres.",
   email: "Asegurate el email es ingresado sea válido.",
-  message: "Tu mensaje debe tener entre 8 y 450 caracteres!",
+  message: "Por favor incluye un mensaje :)",
 };
 
 export const Contact = () => {
@@ -90,6 +90,7 @@ export const Contact = () => {
           {" "}
           {lang == "EN" ? "Get in touch" : "Escríbeme"}
         </h2>
+        <span>{validationMessage.length > 0 && validationMessage}</span>
         <label className={`flex flex-col m-2 text-lg`} htmlFor="name">
           {lang == "EN" ? "Name" : "Nombre"}
           <input
