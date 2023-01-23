@@ -14,6 +14,7 @@ export const Navbar: FC = () => {
   const handleClick = () => {
     toggleDarkMode();
   };
+
   return (
     <nav
       className={`${

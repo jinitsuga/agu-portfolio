@@ -1,12 +1,20 @@
-import React, { FC, useContext } from "react";
-import { Header } from "./Header/Header";
+import React, { FC, useContext, lazy } from "react";
 import { Navbar } from "./Header/Navbar";
 import { Info } from "./Header/Info";
 import { Projects } from "./Projects/Projects";
 import { Contact } from "./Contact/Contact";
 import { DarkModeContext } from "./Context/DarkMode";
 
-// contains every app component before sending to App.tsx (so State can be initiated and style accordingly)
+// dynamically importing language files when necessary
+const enLang = await import("./Languages/en.json").then(
+  (module) => module.default
+);
+
+const esLang = await import("./Languages/es.json").then(
+  (module) => module.default
+);
+
+// contains every app component before sending to App.tsx (so State can be initiated and style the app accordingly)
 
 export const Container: FC = () => {
   const { darkMode } = useContext(DarkModeContext);
