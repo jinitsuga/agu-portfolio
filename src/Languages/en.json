@@ -1,0 +1,16 @@
+{
+  "navbar": {
+    "connect": "let's connect"
+  },
+  "info": "Hey there! I'm Agu. I love learning new concepts and tools by implementation, while thinking about scalable code, accessibility, and UX. Feel free to reach out if you'd like to have something built, talk about code or potentially hire me.",
+  "projects": "Some of my work:",
+  "form": {
+    "title": "Get in touch",
+    "name": "Name",
+    "namePlacholder": "Your name...",
+    "email": "Email",
+    "emailPlaholcer": "Your email so I can get back to you",
+    "message": "Message",
+    "messagePlaceholder": "Your message"
+  }
+}
