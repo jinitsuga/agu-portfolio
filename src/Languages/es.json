@@ -1,0 +1,16 @@
+{
+  "navbar": {
+    "connect": "conectemos"
+  },
+  "info": "Hola! Soy agu. Me encanta aprender nuevos conceptos a través de su implementación, y siempre pensando en código escalable, accesibilidad, y UX. No dudes en ponerte en contacto si estás queriendo construir un sitio, una webapp, hablar de código, o tal vez contratarme!",
+  "projects": "Algunos de mis trabajos:",
+  "form": {
+    "title": "Escríbeme",
+    "name": "Nombre",
+    "namePlacholder": "Tu nombre...",
+    "email": "Email",
+    "emailPlaholcer": "Tu email para quedar comunicados",
+    "message": "Mensaje",
+    "messagePlaceholder": "Tu mensaje"
+  }
+}
