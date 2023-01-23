@@ -2,7 +2,11 @@ import React, { FC } from "react";
 import { DarkModeContext } from "../Context/DarkMode";
 import { LanguageContext } from "../Context/Language";
 
-export const Navbar: FC = () => {
+export interface Props {
+  text: any;
+}
+
+export const Navbar: FC<Props> = ({ text }) => {
   const { darkMode, toggleDarkMode } = React.useContext(DarkModeContext);
 
   const { lang, switchLang } = React.useContext(LanguageContext);
@@ -29,7 +33,7 @@ export const Navbar: FC = () => {
               darkMode ? "hover:border-stone-100" : "hover:border-stone-900"
             }`}
           >
-            {lang == "EN" ? "let's connect" : "conectemos"}
+            {text.connect}
           </a>
         </li>
       </ul>

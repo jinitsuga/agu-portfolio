@@ -7,10 +7,14 @@
   "form": {
     "title": "Escríbeme",
     "name": "Nombre",
-    "namePlacholder": "Tu nombre...",
+    "nameValidation": "Tu nombre debe tener entre 3 y 16 caracteres.",
+    "namePlaceholder": "Tu nombre...",
     "email": "Email",
-    "emailPlaholcer": "Tu email para quedar comunicados",
+    "emailPlaceholder": "Tu email para quedar comunicados",
+    "emailValidation": "Asegurate el email es ingresado sea válido.",
     "message": "Mensaje",
-    "messagePlaceholder": "Tu mensaje"
+    "messagePlaceholder": "Tu mensaje",
+    "messageValidation": "Por favor incluye un mensaje :)",
+    "sendButton": "enviar"
   }
 }

@@ -1,20 +1,10 @@
-import React, { useContext } from "react";
+import React, { FC, useContext } from "react";
 import { send } from "emailjs-com";
 import { DarkModeContext } from "../Context/DarkMode";
 import { LanguageContext } from "../Context/Language";
+import { Props } from "../Header/Navbar";
 
-const validationEN = {
-  name: "Your name should have 3-16 characters",
-  email: "Make sure it's a valid email address.",
-  message: "Please include a message :)",
-};
-const validationES = {
-  name: "Tu nombre debe tener entre 3 y 16 caracteres.",
-  email: "Asegurate el email es ingresado sea válido.",
-  message: "Por favor incluye un mensaje :)",
-};
-
-export const Contact = () => {
+export const Contact: FC<Props> = ({ text }) => {
   const [email, setEmail] = React.useState({
     from: "",
     message: "",
@@ -26,7 +16,6 @@ export const Contact = () => {
   const [emailSent, setEmailSent] = React.useState(false);
 
   const { darkMode } = React.useContext(DarkModeContext);
-  const { lang } = React.useContext(LanguageContext);
 
   // Using emailJS for enabling users to email me without having to copy my address etc
   // submit function includes validation for both Spanish and English
@@ -35,25 +24,19 @@ export const Contact = () => {
     e.preventDefault();
 
     if (email.from.length < 3 || email.from.length > 16) {
-      lang == "EN"
-        ? setValidationMessage(validationEN.name)
-        : setValidationMessage(validationES.name);
+      setValidationMessage(text.nameValidation);
 
       return;
     }
 
     if (!email.from_email.match(/[^\s@]+@[^\s@]+\.[^\s@]+/)) {
-      lang == "EN"
-        ? setValidationMessage(validationEN.email)
-        : setValidationMessage(validationES.email);
+      setValidationMessage(text.emailValidation);
 
       return;
     }
 
     if (email.message.length < 8) {
-      lang == "EN"
-        ? setValidationMessage(validationEN.message)
-        : setValidationMessage(validationES.message);
+      setValidationMessage(text.messageValidation);
 
       return;
     }
@@ -86,13 +69,10 @@ export const Contact = () => {
         className="flex flex-col items-center justify-center"
         onSubmit={handleSubmit}
       >
-        <h2 className="m-4 text-3xl font-bold">
-          {" "}
-          {lang == "EN" ? "Get in touch" : "Escríbeme"}
-        </h2>
+        <h2 className="m-4 text-3xl font-bold">{text.title}</h2>
         <span>{validationMessage.length > 0 && validationMessage}</span>
         <label className={`flex flex-col m-2 text-lg`} htmlFor="name">
-          {lang == "EN" ? "Name" : "Nombre"}
+          {text.name}
           <input
             minLength={3}
             maxLength={16}
@@ -103,13 +83,13 @@ export const Contact = () => {
             }`}
             name="from"
             type="text"
-            placeholder={lang == "EN" ? "Your name..." : "Tu nombre..."}
+            placeholder={text.namePlaceholder}
             value={email.from}
             onChange={handleChange}
           />
         </label>
         <label className="flex flex-col m-2 text-lg" htmlFor="name">
-          Email
+          {text.email}
           <input
             className={`p-2 m-1 w-80 rounded focus:outline-none focus:ring   ${
               darkMode
@@ -118,17 +98,13 @@ export const Contact = () => {
             }`}
             name="from_email"
             type="text"
-            placeholder={
-              lang == "EN"
-                ? "Your email so I can get back to you"
-                : "Tu email para quedar comunicados"
-            }
+            placeholder={text.emailPlaceholder}
             value={email.from_email}
             onChange={handleChange}
           />
         </label>
         <label className="flex flex-col m-2 text-lg" htmlFor="name">
-          {lang == "EN" ? "Message" : "Mensaje"}
+          {text.message}
           <textarea
             maxLength={450}
             minLength={8}
@@ -138,7 +114,7 @@ export const Contact = () => {
                 : "bg-stone-300 focus:ring-stone-900"
             }`}
             name="message"
-            placeholder={lang == "EN" ? "Your message" : "Tu mensaje"}
+            placeholder={text.messagePlaceholder}
             value={email.message}
             onChange={handleChange}
           />
@@ -150,7 +126,7 @@ export const Contact = () => {
           }`}
           type="submit"
         >
-          {lang == "EN" ? "send" : "enviar"}
+          {text.sendButton}
         </button>
       </form>
     </section>

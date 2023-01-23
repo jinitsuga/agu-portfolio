@@ -2,15 +2,19 @@
   "navbar": {
     "connect": "let's connect"
   },
-  "info": "Hey there! I'm Agu. I love learning new concepts and tools by implementation, while thinking about scalable code, accessibility, and UX. Feel free to reach out if you'd like to have something built, talk about code or potentially hire me.",
+  "info": "Hey there! I'm Agu. I love learning new concepts and tools by implementing them, while thinking about scalable code, accessibility, and UX. Feel free to reach out if you'd like to have something built, talk about code or potentially hire me.",
   "projects": "Some of my work:",
   "form": {
     "title": "Get in touch",
     "name": "Name",
-    "namePlacholder": "Your name...",
+    "namePlaceholder": "Your name...",
+    "nameValidation": "Your name should have between 3 and 16 characters.",
     "email": "Email",
-    "emailPlaholcer": "Your email so I can get back to you",
+    "emailPlaceholder": "Your email so I can get back to you",
+    "emailValidation": "Make sure it's a valid email address.",
     "message": "Message",
-    "messagePlaceholder": "Your message"
+    "messagePlaceholder": "Your message",
+    "messageValidation": "Please include a message :)",
+    "sendButton": "send"
   }
 }
