@@ -1,6 +1,8 @@
 import React, { FC } from "react";
 import { DarkModeContext } from "../Context/DarkMode";
 import { LanguageContext } from "../Context/Language";
+import moon from "/images/moon.png";
+import sun from "/images/sun-3.png";
 
 export interface Props {
   text: any;
@@ -44,7 +46,11 @@ export const Navbar: FC<Props> = ({ text }) => {
           }`}
           onClick={handleClick}
         >
-          {darkMode ? "light" : "dark"}
+          {darkMode ? (
+            <img className="h-6 w-6" src={sun}></img>
+          ) : (
+            <img className="h-6 w-6" src={moon}></img>
+          )}
         </button>
         <button
           className={`mr-2 m-2 p-2 ${
