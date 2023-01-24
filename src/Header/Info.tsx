@@ -9,9 +9,9 @@ export const Info: FC<Props> = ({ text }) => {
     <section
       className={`${
         darkMode ? "bg-stone-800 text-stone-50" : "bg-stone-100"
-      } flex flex-row w-2/4 justify-around`}
+      } flex flex-row w-3/4 sm:w-3/4 justify-around`}
     >
-      <div className="flex flex-col p-6 text-lg w-[560px] h-[235px]  z-10">
+      <div className="flex flex-col p-6 text-lg w-[560px]  z-10">
         <p>{text}</p>
         <ul className="flex flex-row gap-4 justify-self-center text-3xl  self-center m-4">
           <li className="text-3xl text-stone-50">

@@ -69,7 +69,9 @@ export const Contact: FC<Props> = ({ text }) => {
         onSubmit={handleSubmit}
       >
         <h2 className="m-4 text-3xl font-bold">{text.title}</h2>
-        <span>{validationMessage.length > 0 && validationMessage}</span>
+        <span className="text-center">
+          {validationMessage.length > 0 && validationMessage}
+        </span>
         <label className={`flex flex-col m-2 text-lg`} htmlFor="name">
           {text.name}
           <input
