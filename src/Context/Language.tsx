@@ -13,8 +13,6 @@ const LanguageContext = React.createContext<any>(null);
 const LangProvider: FC<Props> = (props) => {
   const [lang, setLang] = React.useState<LangContextType>("EN");
 
-  console.log(lang);
-
   const switchLang = () => {
     if (lang == "EN") {
       return setLang("ES");

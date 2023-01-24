@@ -2,7 +2,6 @@ import React, { FC } from "react";
 import { DarkModeContext } from "../Context/DarkMode";
 import { Project } from "./Project";
 import { projectsInfo } from "./projectsInfo";
-import { LanguageContext } from "../Context/Language";
 import { Props } from "../Header/Navbar";
 
 export const Projects: FC<Props> = ({ text }) => {

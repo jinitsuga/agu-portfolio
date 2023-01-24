@@ -1,7 +1,6 @@
 import React, { FC, useContext } from "react";
 import { send } from "emailjs-com";
 import { DarkModeContext } from "../Context/DarkMode";
-import { LanguageContext } from "../Context/Language";
 import { Props } from "../Header/Navbar";
 
 export const Contact: FC<Props> = ({ text }) => {

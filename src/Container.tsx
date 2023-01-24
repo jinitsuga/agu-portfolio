@@ -1,4 +1,4 @@
-import React, { FC, useContext, lazy } from "react";
+import React, { FC, useContext } from "react";
 import { Navbar } from "./Header/Navbar";
 import { Info } from "./Header/Info";
 import { Projects } from "./Projects/Projects";
