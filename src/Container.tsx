@@ -7,9 +7,9 @@ import { DarkModeContext } from "./Context/DarkMode";
 import { LanguageContext } from "./Context/Language";
 
 // dynamically importing language files when necessary
-const enLang = await import("./Languages/en.json");
+const enLang = await import("./Languages/en.json").then((lang) => lang.default);
 
-const esLang = await import("./Languages/es.json");
+const esLang = await import("./Languages/es.json").then((lang) => lang.default);
 
 // contains every app component before sending to App.tsx (so State can be initiated and style the app accordingly)
 
