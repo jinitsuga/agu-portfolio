@@ -27,7 +27,7 @@ export const Container: FC = () => {
       } h-100% flex flex-col items-center justify-center font-['Roboto_Slab']`}
     >
       <Navbar text={language.navbar} />
-      <Info text={language.info} />
+      <Info greeting={language.infoGreeting} text={language.info} />
       <Projects text={language.projects} />
       <Contact text={language.form} />
     </div>
