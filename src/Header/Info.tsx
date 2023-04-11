@@ -16,7 +16,13 @@ export const Info: FC<Props> = ({ text, greeting }) => {
       } flex flex-row w-3/4 sm:w-3/4 justify-around`}
     >
       <div className="flex flex-col p-6 text-lg w-[560px]  z-10">
-        <h3 className="text-4xl text-cyan-700 mb-1">{greeting}</h3>
+        <h3
+          className={`${
+            darkMode ? "text-cyan-500" : "text-cyan-700"
+          } text-4xl  mb-1"`}
+        >
+          {greeting}
+        </h3>
         <p>{text}</p>
         <ul className="flex flex-row gap-4 justify-self-center text-3xl  self-center m-4">
           <li className="text-3xl text-stone-50">

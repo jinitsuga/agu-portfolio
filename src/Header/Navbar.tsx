@@ -25,7 +25,8 @@ export const Navbar: FC<Props> = ({ text }) => {
     <nav
       className={`${
         darkMode ? "bg-black text-stone-50 border-stone-50" : "bg-stone-100"
-      } sticky top-0 z-10 flex flex-row w-full justify-around items-center backdrop-blur-md p-6 text-lg mb-8 border-b-2 border-stone-400 z-20 opacity-80`}
+      } sticky top-0 z-10 flex flex-row w-full justify-around items-center  p-6 text-lg mb-8 border-b-2 border-stone-400 z-20 opacity-90
+      `}
     >
       <ul className="flex gap-8 justify-between w-62">
         <li>
@@ -36,6 +37,16 @@ export const Navbar: FC<Props> = ({ text }) => {
             }`}
           >
             {text.connect}
+          </a>
+        </li>
+        <li>
+          <a
+            href="#contact"
+            className={`border-b-2 border-transparent hover:cursor-pointer ${
+              darkMode ? "hover:border-stone-100" : "hover:border-stone-900"
+            }`}
+          >
+            blog (??)
           </a>
         </li>
       </ul>

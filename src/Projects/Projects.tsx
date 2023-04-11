@@ -26,7 +26,7 @@ export const Projects: FC<Props> = ({ text }) => {
   return (
     <section
       className={`${
-        darkMode ? "bg-stone-900" : "bg-stone-200"
+        darkMode ? "bg-black" : "bg-stone-200"
       } flex flex-col justify-center items-center w-screen pb-4`}
     >
       <h4
