@@ -9,7 +9,7 @@ interface Props {
 }
 
 const DarkModeProvider: FC<Props> = (props) => {
-  const [darkMode, setDarkMode] = React.useState<boolean>(false);
+  const [darkMode, setDarkMode] = React.useState<boolean>(true);
 
   const toggleDarkMode = () => setDarkMode(!darkMode);
 

@@ -24,8 +24,8 @@ export const Navbar: FC<Props> = ({ text }) => {
   return (
     <nav
       className={`${
-        darkMode ? "bg-stone-800 text-stone-50 border-stone-50" : "bg-stone-100"
-      } sticky top-0 z-10 flex flex-row w-full justify-around items-center p-6 text-lg mb-8 border-b-2 border-stone-400 z-20`}
+        darkMode ? "bg-black text-stone-50 border-stone-50" : "bg-stone-100"
+      } sticky top-0 z-10 flex flex-row w-full justify-around items-center backdrop-blur-md p-6 text-lg mb-8 border-b-2 border-stone-400 z-20 opacity-80`}
     >
       <ul className="flex gap-8 justify-between w-62">
         <li>

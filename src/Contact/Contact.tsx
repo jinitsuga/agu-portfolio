@@ -61,7 +61,7 @@ export const Contact: FC<Props> = ({ text }) => {
     <section
       id="contact"
       className={`${
-        darkMode ? "bg-stone-800 text-stone-50" : "bg-stone-100"
+        darkMode ? "bg-black text-stone-50" : "bg-stone-100"
       } flex flex-row justify-center items-center w-screen pb-12 `}
     >
       <form
