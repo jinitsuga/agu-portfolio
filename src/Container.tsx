@@ -24,7 +24,7 @@ export const Container: FC = () => {
     <div
       className={`${
         darkMode ? "bg-black" : "bg-stone-100"
-      } h-100% flex flex-col items-center justify-center font-['Roboto_Slab']`}
+      } h-100% flex flex-col items-center justify-center font-['Open_Sans']`}
     >
       <Navbar text={language.navbar} />
       <Info greeting={language.infoGreeting} text={language.info} />

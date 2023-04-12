@@ -1,6 +1,7 @@
 {
   "navbar": {
-    "connect": "message me"
+    "connect": "message me",
+    "blog": "thoughts"
   },
   "infoGreeting": "Hey there! I'm Agu.",
   "info": "I love learning new concepts and tools by implementing them, while thinking about scalable code, accessibility, and UX. Feel free to reach out if you'd like to have something built, talk about code or potentially hire me.",
