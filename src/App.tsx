@@ -17,7 +17,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <div className="h-100% flex flex-col items-center justify-center font-['Open_Sans']">
+      <div>
         <Navbar />
         <Container />
       </div>
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       return null;
     },
     element: (
-      <div className="h-100% flex flex-col items-center justify-center font-['Open_Sans']">
+      <div>
         <Navbar />
         <Blog />
       </div>
