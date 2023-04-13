@@ -19,6 +19,7 @@ const router = createBrowserRouter([
     path: "/blog",
     loader: async () => {
       // import JSON with blog posts from API
+      return null;
     },
     element: <Blog />,
   },
@@ -38,7 +39,8 @@ function App() {
       } h-100% flex flex-col items-center justify-center font-['Open_Sans']`}
     >
       <Navbar text={language.navbar} />
-      <Container />
+      <RouterProvider router={router} />
+      {/* <Container /> */}
     </div>
   );
 }
