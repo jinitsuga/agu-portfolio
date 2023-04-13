@@ -1,9 +1,17 @@
 import { DarkModeProvider } from "./Context/DarkMode";
+import React, { FC, useContext } from "react";
 import { LangProvider } from "./Context/Language";
 import { Container } from "./Container";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Blog } from "./Blog/Blog";
 import "./App.css";
+import { DarkModeContext } from "./Context/DarkMode";
+import { LanguageContext } from "./Context/Language";
+import { Navbar } from "./Header/Navbar";
+
+const enLang = await import("./Languages/en.json").then((lang) => lang.default);
+
+const esLang = await import("./Languages/es.json").then((lang) => lang.default);
 
 const router = createBrowserRouter([
   { path: "/", element: <Container /> },
@@ -17,13 +25,20 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  const { darkMode } = useContext(DarkModeContext);
+
+  const { lang } = useContext(LanguageContext);
+
+  const language = lang == "EN" ? enLang : esLang;
+
   return (
-    <div className="">
-      <LangProvider>
-        <DarkModeProvider>
-          <Container />
-        </DarkModeProvider>
-      </LangProvider>
+    <div
+      className={`${
+        darkMode ? "bg-black" : "bg-stone-100"
+      } h-100% flex flex-col items-center justify-center font-['Open_Sans']`}
+    >
+      <Navbar text={language.navbar} />
+      <Container />
     </div>
   );
 }
