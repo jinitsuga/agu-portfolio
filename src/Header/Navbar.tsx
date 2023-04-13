@@ -1,6 +1,8 @@
 import React, { FC } from "react";
 import { DarkModeContext } from "../Context/DarkMode";
 import { LanguageContext } from "../Context/Language";
+import { Link } from "react-router-dom";
+
 import moon from "/images/moon.png";
 import sun from "/images/sun-3.png";
 
@@ -8,10 +10,11 @@ export interface Props {
   text: any;
 }
 
-export const Navbar: FC<Props> = ({ text }) => {
+export const Navbar: FC = ({}) => {
   const { darkMode, toggleDarkMode } = React.useContext(DarkModeContext);
 
   const { lang, switchLang } = React.useContext(LanguageContext);
+  console.log("navbar loaded lmao");
 
   const changeLanguages = () => {
     switchLang();
@@ -30,24 +33,24 @@ export const Navbar: FC<Props> = ({ text }) => {
     >
       <ul className="flex gap-8 justify-between w-62">
         <li>
-          <a
-            href="#contact"
+          <Link
+            to="/"
             className={`border-b-2 border-transparent hover:cursor-pointer ${
               darkMode ? "hover:border-stone-100" : "hover:border-stone-900"
             }`}
           >
-            {text.connect}
-          </a>
+            {lang == "EN" ? "message me" : "conectemos"}
+          </Link>
         </li>
         <li>
-          <a
-            href=""
+          <Link
+            to="/blog"
             className={`border-b-2 border-transparent hover:cursor-pointer ${
               darkMode ? "hover:border-stone-100" : "hover:border-stone-900"
             }`}
           >
-            {text.blog}
-          </a>
+            {lang == "EN" ? "thoughts" : "posts"}
+          </Link>
         </li>
       </ul>
       <div className="flex">

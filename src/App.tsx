@@ -14,14 +14,27 @@ const enLang = await import("./Languages/en.json").then((lang) => lang.default);
 const esLang = await import("./Languages/es.json").then((lang) => lang.default);
 
 const router = createBrowserRouter([
-  { path: "/", element: <Container /> },
+  {
+    path: "/",
+    element: (
+      <div className="h-100% flex flex-col items-center justify-center font-['Open_Sans']">
+        <Navbar />
+        <Container />
+      </div>
+    ),
+  },
   {
     path: "/blog",
     loader: async () => {
       // import JSON with blog posts from API
       return null;
     },
-    element: <Blog />,
+    element: (
+      <div className="h-100% flex flex-col items-center justify-center font-['Open_Sans']">
+        <Navbar />
+        <Blog />
+      </div>
+    ),
   },
 ]);
 
@@ -38,7 +51,6 @@ function App() {
         darkMode ? "bg-black" : "bg-stone-100"
       } h-100% flex flex-col items-center justify-center font-['Open_Sans']`}
     >
-      <Navbar text={language.navbar} />
       <RouterProvider router={router} />
       {/* <Container /> */}
     </div>
