@@ -26,6 +26,7 @@ const router = createBrowserRouter([
     path: "/blog",
     loader: async () => {
       // import JSON with blog posts from API
+      getPosts();
       return null;
     },
     element: (

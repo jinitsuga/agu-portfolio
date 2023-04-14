@@ -1,9 +1,11 @@
 import axios from "axios";
 
+const baseUrl = "http://localhost:3001/api";
+
 export function getPosts() {
   let posts = "";
   axios
-    .get("localhost:3001/api/people")
+    .get(`${baseUrl}/people`)
     .then((response) => {
       posts = response.data();
       console.log(posts);

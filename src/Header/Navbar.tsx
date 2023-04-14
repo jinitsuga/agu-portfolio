@@ -52,6 +52,23 @@ export const Navbar: FC = memo(({}) => {
             {lang == "EN" ? "thoughts" : "posts"}
           </Link>
         </li>
+        <li className="text-4xl text-stone-50">
+          <a
+            className={`${
+              darkMode
+                ? "p-1 border-b-2 border-transparent hover:border-stone-100"
+                : "border-b-2 border-transparent hover:border-stone-900"
+            }`}
+            target="_blank"
+            href="https://github.com/jinitsuga"
+          >
+            {darkMode ? (
+              <i className="devicon-github-original"></i>
+            ) : (
+              <i className="devicon-github-original colored"></i>
+            )}
+          </a>
+        </li>
       </ul>
       <div className="flex">
         <button
