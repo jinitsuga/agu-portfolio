@@ -1,6 +1,4 @@
-import { DarkModeProvider } from "./Context/DarkMode";
 import React, { FC, useContext } from "react";
-import { LangProvider } from "./Context/Language";
 import { Container } from "./Container";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Blog } from "./Blog/Blog";
@@ -8,6 +6,7 @@ import "./App.css";
 import { DarkModeContext } from "./Context/DarkMode";
 import { LanguageContext } from "./Context/Language";
 import { Navbar } from "./Header/Navbar";
+import { getPosts } from "./Data/data";
 
 const enLang = await import("./Languages/en.json").then((lang) => lang.default);
 

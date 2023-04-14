@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, memo } from "react";
 import { DarkModeContext } from "../Context/DarkMode";
 import { LanguageContext } from "../Context/Language";
 import { Link } from "react-router-dom";
@@ -10,7 +10,7 @@ export interface Props {
   text: any;
 }
 
-export const Navbar: FC = ({}) => {
+export const Navbar: FC = memo(({}) => {
   const { darkMode, toggleDarkMode } = React.useContext(DarkModeContext);
 
   const { lang, switchLang } = React.useContext(LanguageContext);
@@ -87,4 +87,4 @@ export const Navbar: FC = ({}) => {
       </div>
     </nav>
   );
-};
+});
