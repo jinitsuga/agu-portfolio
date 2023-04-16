@@ -2,14 +2,19 @@ import axios from "axios";
 
 const baseUrl = "http://localhost:3001/api";
 
-export function getPosts() {
+const getPosts = async () => {
   let posts = "";
-  axios
-    .get(`${baseUrl}/people`)
-    .then((response) => {
-      posts = response.data();
-      console.log(posts);
-      return posts;
-    })
-    .catch((err) => console.log(err));
-}
+
+  try {
+    console.log("Making a request...");
+    const response = await axios.get(`${baseUrl}/people`, {
+      headers: { "Cache-Control": "max-age" },
+    });
+    posts = response.data.entries;
+  } catch (err) {
+    console.log(err);
+  }
+  return posts;
+};
+
+export { getPosts };

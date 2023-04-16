@@ -1,6 +1,7 @@
 import React, { FC, memo } from "react";
 import { DarkModeContext } from "../Context/DarkMode";
 import { LanguageContext } from "../Context/Language";
+import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 import moon from "/images/moon.png";

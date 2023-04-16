@@ -1,6 +1,7 @@
 import React, { FC, useContext } from "react";
 import { Container } from "./Container";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import { Blog } from "./Blog/Blog";
 import "./App.css";
 import { DarkModeContext } from "./Context/DarkMode";
@@ -11,6 +12,8 @@ import { getPosts } from "./Data/data";
 const enLang = await import("./Languages/en.json").then((lang) => lang.default);
 
 const esLang = await import("./Languages/es.json").then((lang) => lang.default);
+
+const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
@@ -23,18 +26,13 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/blog",
-    loader: async () => {
-      // import JSON with blog posts from API
-      getPosts();
-      return null;
-    },
     element: (
       <div>
         <Navbar />
         <Blog />
       </div>
     ),
+    path: "/blog",
   },
 ]);
 
@@ -45,6 +43,7 @@ function App() {
 
   const language = lang == "EN" ? enLang : esLang;
 
+  console.log("aloha");
   return (
     <div
       className={`${
@@ -52,7 +51,6 @@ function App() {
       } h-100% flex flex-col items-center justify-center font-['Open_Sans']`}
     >
       <RouterProvider router={router} />
-      {/* <Container /> */}
     </div>
   );
 }
