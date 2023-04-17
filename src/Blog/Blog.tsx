@@ -5,13 +5,16 @@ import { useLoaderData } from "react-router-dom";
 import axios from "axios";
 
 export const Blog: FC = () => {
-  const { posts, setPosts } = React.useState<Array<any> | null>(null);
+  const [posts, setPosts] = React.useState<Array<any> | null>(null);
+
   console.log("hola");
   React.useEffect(() => {
     getPosts()
       .then(setPosts)
       .catch(() => setPosts([]));
   }, []);
+
+  console.log(posts);
   // const { isLoading, isError, data, error } = useQuery({
   //   queryKey: ["posts"],
   //   queryFn: async () => {

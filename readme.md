@@ -11,3 +11,6 @@ As I was exploring multi-language possibilities, investigating about dynamic and
 #### Posts/thoughts/blog addition
 
 re-structured page, included router and react memo. Why? To practice some backend concepts that I was learning, thought I'd incorporate them into an already working thing.
+Tested React Router loader and React Query for passing data to the blog but ended up going with a simple useEffect for now - I was over-engineering a simple thing to prevent the issue of re-requesting the blog data from the database every time the route is revisited, but this fix most likely needs to come from the backend/API
+
+Found out that React.StrictMode (dev only feature) re-renders the entire app (drove me nuts) !!!!!!!!!!!!!!
