@@ -1,13 +1,16 @@
 import React, { FC, memo } from "react";
-import { useQuery } from "@tanstack/react-query";
 import { getPosts } from "../Data/data";
-import { useLoaderData } from "react-router-dom";
-import axios from "axios";
+import { BlogItem } from "./BlogItem";
+
+export type BlogPost = {
+  name: string;
+  content: string;
+  id: number;
+};
 
 export const Blog: FC = () => {
-  const [posts, setPosts] = React.useState<Array<any> | null>(null);
+  const [posts, setPosts] = React.useState<Array<BlogPost> | null>(null);
 
-  console.log("hola");
   React.useEffect(() => {
     getPosts()
       .then(setPosts)
@@ -15,24 +18,19 @@ export const Blog: FC = () => {
   }, []);
 
   console.log(posts);
-  // const { isLoading, isError, data, error } = useQuery({
-  //   queryKey: ["posts"],
-  //   queryFn: async () => {
-  //     const posts = await getPosts();
-  //     return posts;
-  //   },
-  // });
 
-  // const posts = useLoaderData();
+  const postsList = posts?.map((post) => {
+    const description =
+      post.content.length > 150 ? post.content.slice(0, 150) : post.content;
 
-  // if (postsQuery.status == "success") {
-  //   console.log(postsQuery.data);
-  // }
+    return (
+      <BlogItem key={post.id} title={post.name} description={description} />
+    );
+  });
 
   return (
     <section className="flex flex-column text-white w-screen h-screen">
       <h2 className="text-4xl text-left">Posts </h2>
-      {posts && posts.map(JSON.stringify)}
     </section>
   );
 };

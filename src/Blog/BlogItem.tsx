@@ -1,11 +1,13 @@
 import React, { FC } from "react";
+// import { BlogPost } from "./Blog";
 
-type BlogPost = {
-  title: String;
-  description: String;
+type BlogItemType = {
+  title: string;
+  description: string;
+  key: number;
 };
 
-export const BlogItem: FC<BlogPost> = ({ title, description }) => {
+export const BlogItem: FC<BlogItemType> = ({ title, description, key }) => {
   return (
     <div className="flex flex-col justify-center items-center">
       <h4>{title}</h4>

@@ -21,7 +21,7 @@ const LangProvider: FC<Props> = (props) => {
       return setLang("EN");
     }
   };
-  console.log("languagex");
+
   return (
     <LanguageContext.Provider value={{ lang, switchLang }}>
       {props.children}
