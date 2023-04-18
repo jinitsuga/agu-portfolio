@@ -15,7 +15,7 @@ export const Blog: FC = () => {
 
   React.useEffect(() => {
     getPosts()
-      .then((res) => setPosts(res))
+      .then((res: any) => setPosts(res))
       .catch(() => setPosts([]));
   }, []);
 
