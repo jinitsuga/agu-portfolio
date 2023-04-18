@@ -14,6 +14,9 @@ export const Blog: FC = () => {
   const { darkMode } = React.useContext(DarkModeContext);
 
   React.useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
     getPosts()
       .then((res: any) => setPosts(res))
       .catch(() => setPosts([]));

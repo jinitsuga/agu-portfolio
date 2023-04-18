@@ -15,7 +15,15 @@ export const Navbar: FC = memo(({}) => {
   const { darkMode, toggleDarkMode } = React.useContext(DarkModeContext);
 
   const { lang, switchLang } = React.useContext(LanguageContext);
-  console.log("navbar loaded lmao");
+
+  const location = useLocation();
+
+  const scrollToForm = () => {
+    const contact = document.getElementById("contact");
+    if (contact) {
+      contact.scrollIntoView();
+    }
+  };
 
   const changeLanguages = () => {
     switchLang();
@@ -36,6 +44,19 @@ export const Navbar: FC = memo(({}) => {
         <li>
           <Link
             to="/"
+            className={`border-b-2 border-transparent hover:cursor-pointer ${
+              darkMode ? "hover:border-stone-100" : "hover:border-stone-900"
+            }`}
+          >
+            home
+          </Link>
+        </li>
+        <li>
+          <Link
+            to={`${location.pathname == "/" ? "" : "/"}`}
+            onClick={() => {
+              scrollToForm();
+            }}
             className={`border-b-2 border-transparent hover:cursor-pointer ${
               darkMode ? "hover:border-stone-100" : "hover:border-stone-900"
             }`}
