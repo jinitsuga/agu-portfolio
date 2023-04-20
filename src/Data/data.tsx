@@ -4,7 +4,7 @@ const baseUrl = import.meta.env.VITE_BASE_URL;
 
 console.log(`${baseUrl}`);
 console.log(`${baseUrl}/people`);
-
+console.log(baseUrl + "/people");
 const getPosts = async () => {
   let posts = "";
 
