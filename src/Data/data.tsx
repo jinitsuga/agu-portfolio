@@ -3,14 +3,12 @@ import axios from "axios";
 const baseUrl = import.meta.env.VITE_BASE_URL;
 
 console.log(`${baseUrl}`);
-console.log(`${baseUrl}/people`);
-console.log(baseUrl + "/people");
+
 const getPosts = async () => {
   let posts = "";
-
   try {
     console.log("Making a request...");
-    const response = await axios.get(`${baseUrl}/people`, {
+    const response = await axios.get(`${baseUrl}`, {
       headers: { "Cache-Control": "max-age" },
     });
     posts = response.data.entries;
