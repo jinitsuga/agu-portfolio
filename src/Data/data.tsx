@@ -8,7 +8,7 @@ const getPosts = async () => {
   let posts = "";
   try {
     console.log("Making a request...");
-    const response = await axios.get(`${baseUrl}`, {
+    const response = await axios.get(baseUrl, {
       headers: { "Cache-Control": "max-age" },
     });
     posts = response.data.entries;
