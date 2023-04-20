@@ -26,12 +26,12 @@ export const Blog: FC = () => {
 
   const postsList =
     posts &&
-    posts.map((post) => {
+    posts.map((post, index) => {
       const description =
         post.content.length > 150 ? post.content.slice(0, 150) : post.content;
 
       return (
-        <BlogItem key={post.id} title={post.name} description={description} />
+        <BlogItem key={index} title={post.name} description={description} />
       );
     });
 
