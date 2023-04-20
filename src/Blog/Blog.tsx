@@ -2,6 +2,7 @@ import React, { FC, memo } from "react";
 import { getPosts } from "../Data/data";
 import { BlogItem } from "./BlogItem";
 import { DarkModeContext } from "../Context/DarkMode";
+import { entries } from "../Data/posts";
 
 export type BlogPost = {
   name: string;
@@ -9,6 +10,7 @@ export type BlogPost = {
   id: number;
 };
 
+console.log(entries);
 export const Blog: FC = () => {
   const [posts, setPosts] = React.useState<Array<BlogPost> | null>(null);
   const { darkMode } = React.useContext(DarkModeContext);
@@ -17,9 +19,10 @@ export const Blog: FC = () => {
     window.scrollTo({
       top: 0,
     });
-    getPosts()
-      .then((res: any) => setPosts(res))
-      .catch(() => setPosts([]));
+    setPosts(entries);
+    // getPosts()
+    //   .then((res: any) => setPosts(res))
+    //   .catch(() => setPosts([]));
   }, []);
 
   console.log(posts);
