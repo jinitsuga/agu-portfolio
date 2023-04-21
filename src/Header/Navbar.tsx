@@ -41,44 +41,49 @@ export const Navbar: FC = memo(({}) => {
       `}
     >
       <ul className="flex flex-col flex-wrap md:flex-row gap-6 justify-between md:w-62">
-        <li>
+        <li className="hover:text-cyan-200">
           <Link
             to="/"
+            onClick={() => {
+              window.scrollTo({
+                top: 0,
+              });
+            }}
             className={`border-b-2 border-transparent hover:cursor-pointer ${
-              darkMode ? "hover:border-stone-100" : "hover:border-stone-900"
+              darkMode ? "hover:border-cyan-200" : "hover:border-stone-900"
             }`}
           >
             home
           </Link>
         </li>
-        <li>
+        <li className="hover:text-cyan-200">
           <Link
             to={`${location.pathname == "/" ? "" : "/"}`}
             onClick={() => {
               scrollToForm();
             }}
             className={`border-b-2 border-transparent hover:cursor-pointer ${
-              darkMode ? "hover:border-stone-100" : "hover:border-stone-900"
+              darkMode ? "hover:border-cyan-200" : "hover:border-stone-900"
             }`}
           >
             {lang == "EN" ? "message me" : "conectemos"}
           </Link>
         </li>
-        <li>
+        <li className="hover:text-cyan-200">
           <Link
             to="/blog"
             className={`border-b-2 border-transparent hover:cursor-pointer ${
-              darkMode ? "hover:border-stone-100" : "hover:border-stone-900"
+              darkMode ? "hover:border-cyan-200" : "hover:border-stone-900"
             }`}
           >
             {lang == "EN" ? "thoughts" : "posts"}
           </Link>
         </li>
-        <li className="text-4xl text-stone-50">
+        <li className="text-4xl text-stone-50 hover:text-cyan-400 ">
           <a
             className={`${
               darkMode
-                ? "p-1 border-b-2 border-transparent hover:border-stone-100"
+                ? "p-1 border-b-2 border-transparent hover:border-cyan-200"
                 : "border-b-2 border-transparent hover:border-stone-900"
             }`}
             target="_blank"
@@ -100,15 +105,9 @@ export const Navbar: FC = memo(({}) => {
           onClick={handleClick}
         >
           {darkMode ? (
-            <img
-              className="h-6 w-6 md:mr-6 md:flex md:justify-center"
-              src={sun}
-            ></img>
+            <img className="h-6 w-6 md:flex md:justify-center" src={sun}></img>
           ) : (
-            <img
-              className="h-6 w-6 md:mr-6 md:flex md:justify-center"
-              src={moon}
-            ></img>
+            <img className="h-6 w-6 md:flex md:justify-center" src={moon}></img>
           )}
         </button>
         <button
