@@ -20,6 +20,8 @@ export const Blog: FC = () => {
       top: 0,
     });
     setPosts(entries);
+
+    // Actual request to API waiting on a fix :)
     // getPosts()
     //   .then((res: any) => setPosts(res))
     //   .catch(() => setPosts([]));

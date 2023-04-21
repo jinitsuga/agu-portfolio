@@ -92,17 +92,23 @@ export const Navbar: FC = memo(({}) => {
           </a>
         </li>
       </ul>
-      <div className="flex">
+      <div className="flex flex-col md:flex-row">
         <button
-          className={`p-2 outline-2 mr-6 ${
+          className={`p-2 outline-2 ${
             darkMode ? "ring-stone-50 hover:ring" : "ring-stone-900 hover:ring"
-          }`}
+          } flex justify-center md:block`}
           onClick={handleClick}
         >
           {darkMode ? (
-            <img className="h-6 w-6" src={sun}></img>
+            <img
+              className="h-6 w-6 md:mr-6 md:flex md:justify-center"
+              src={sun}
+            ></img>
           ) : (
-            <img className="h-6 w-6" src={moon}></img>
+            <img
+              className="h-6 w-6 md:mr-6 md:flex md:justify-center"
+              src={moon}
+            ></img>
           )}
         </button>
         <button
