@@ -22,7 +22,9 @@ export const Blog: FC = () => {
     window.scrollTo({
       top: 0,
     });
-    setPosts(entries);
+
+    const sortedPosts = entries.sort((a: BlogPost, b: BlogPost) => b.id - a.id);
+    setPosts(sortedPosts);
 
     // Actual request to API waiting on a fix :)
     // getPosts()
