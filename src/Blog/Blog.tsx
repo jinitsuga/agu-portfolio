@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import { BlogItem } from "./BlogItem";
 import { DarkModeContext } from "../Context/DarkMode";
 import { entries } from "../Data/posts";
+import { Post } from "./Post";
 
 export type BlogPost = {
   name: string;
@@ -14,7 +15,7 @@ export const Blog: FC = () => {
   const [activePost, setActivePost] = React.useState<BlogPost | null>(null);
 
   const { darkMode } = React.useContext(DarkModeContext);
-  console.log(activePost);
+
   React.useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -47,8 +48,24 @@ export const Blog: FC = () => {
         darkMode ? "text-white" : "text-black"
       }  " flex flex-col text-white w-screen h-screen items-center`}
     >
-      <h2 className="text-4xl text-left">Posts</h2>
-      <div className="flex flex-col justify-center">{postsList}</div>
+      {!activePost ? (
+        <div>
+          <h2 className="text-4xl text-center">Posts</h2>
+          <div className="flex flex-col justify-center">{postsList}</div>
+        </div>
+      ) : (
+        <div>
+          <button
+            onClick={(e: any) => {
+              e.preventDefault();
+              setActivePost(null);
+            }}
+          >
+            Back to posts
+          </button>
+          <Post {...activePost} />
+        </div>
+      )}
     </section>
   );
 };
