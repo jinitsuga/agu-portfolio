@@ -11,8 +11,10 @@ export type BlogPost = {
 
 export const Blog: FC = () => {
   const [posts, setPosts] = React.useState<Array<BlogPost> | null>(null);
-  const { darkMode } = React.useContext(DarkModeContext);
+  const [activePost, setActivePost] = React.useState<BlogPost | null>(null);
 
+  const { darkMode } = React.useContext(DarkModeContext);
+  console.log(activePost);
   React.useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -29,7 +31,13 @@ export const Blog: FC = () => {
         post.content.length > 150 ? post.content.slice(0, 150) : post.content;
 
       return (
-        <BlogItem key={index} title={post.name} description={description} />
+        <BlogItem
+          key={index}
+          id={post.id}
+          title={post.name}
+          description={description}
+          setPost={setActivePost}
+        />
       );
     });
 

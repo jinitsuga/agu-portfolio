@@ -4,11 +4,23 @@ import React, { FC } from "react";
 type BlogItemType = {
   title: string;
   description: string;
+  id: number;
+  setPost: Function;
 };
 
-export const BlogItem: FC<BlogItemType> = ({ title, description }) => {
+export const BlogItem: FC<BlogItemType> = ({
+  title,
+  description,
+  id,
+  setPost,
+}) => {
   return (
-    <div className="flex flex-col justify-center items-center border rounded p-4 max-w-xl m-2 hover:cursor-pointer hover:text-cyan-200">
+    <div
+      onClick={() => {
+        setPost({ name: title, content: description, id });
+      }}
+      className="flex flex-col justify-center items-center border rounded p-4 max-w-xl m-2 hover:cursor-pointer hover:text-cyan-200"
+    >
       <h4 className="text-2xl text-cyan-400 mb-2 ">{title}</h4>
       <p>{description}...</p>
     </div>
