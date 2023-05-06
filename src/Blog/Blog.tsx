@@ -1,5 +1,4 @@
-import React, { FC, memo } from "react";
-import { getPosts } from "../Data/data";
+import React, { FC } from "react";
 import { BlogItem } from "./BlogItem";
 import { DarkModeContext } from "../Context/DarkMode";
 import { entries } from "../Data/posts";
@@ -9,11 +8,7 @@ export type BlogPost = {
   content: string;
   id: number;
 };
-const reqUrl: string = import.meta.env.VITE_REQ_URL;
 
-console.log(`${reqUrl}people`);
-
-console.log(entries);
 export const Blog: FC = () => {
   const [posts, setPosts] = React.useState<Array<BlogPost> | null>(null);
   const { darkMode } = React.useContext(DarkModeContext);
@@ -25,14 +20,7 @@ export const Blog: FC = () => {
 
     const sortedPosts = entries.sort((a: BlogPost, b: BlogPost) => b.id - a.id);
     setPosts(sortedPosts);
-
-    // Actual request to API waiting on a fix :)
-    // getPosts()
-    //   .then((res: any) => setPosts(res))
-    //   .catch(() => setPosts([]));
   }, []);
-
-  console.log(posts);
 
   const postsList =
     posts &&

@@ -1,19 +1,15 @@
 import React, { FC, useContext } from "react";
 import { Container } from "./Container";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import { Blog } from "./Blog/Blog";
 import "./App.css";
 import { DarkModeContext } from "./Context/DarkMode";
 import { LanguageContext } from "./Context/Language";
 import { Navbar } from "./Header/Navbar";
-import { getPosts } from "./Data/data";
 
 const enLang = await import("./Languages/en.json").then((lang) => lang.default);
 
 const esLang = await import("./Languages/es.json").then((lang) => lang.default);
-
-const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
@@ -43,7 +39,6 @@ function App() {
 
   const language = lang == "EN" ? enLang : esLang;
 
-  console.log("aloha");
   return (
     <div
       className={`${
