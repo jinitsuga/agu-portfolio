@@ -36,6 +36,7 @@ export const Blog: FC = () => {
           key={index}
           id={post.id}
           title={post.name}
+          content={post.content}
           description={description}
           setPost={setActivePost}
         />
@@ -54,8 +55,9 @@ export const Blog: FC = () => {
           <div className="flex flex-col justify-center">{postsList}</div>
         </div>
       ) : (
-        <div>
+        <div className="flex flex-col justify-center items-center">
           <button
+            className="text-2xl text-cyan-400 p-4 hover:outline mb-4 rounded"
             onClick={(e: any) => {
               e.preventDefault();
               setActivePost(null);

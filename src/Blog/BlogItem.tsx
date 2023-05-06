@@ -3,6 +3,7 @@ import React, { FC } from "react";
 
 type BlogItemType = {
   title: string;
+  content: string;
   description: string;
   id: number;
   setPost: Function;
@@ -11,13 +12,14 @@ type BlogItemType = {
 export const BlogItem: FC<BlogItemType> = ({
   title,
   description,
+  content,
   id,
   setPost,
 }) => {
   return (
     <div
       onClick={() => {
-        setPost({ name: title, content: description, id });
+        setPost({ name: title, description, content, id });
       }}
       className="flex flex-col justify-center items-center border rounded p-4 max-w-xl m-2 hover:cursor-pointer hover:text-cyan-200"
     >
