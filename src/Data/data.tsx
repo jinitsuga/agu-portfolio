@@ -2,6 +2,8 @@ import axios from "axios";
 
 const reqUrl = import.meta.env.VITE_REQ_URL;
 
+console.log(`${reqUrl}people`);
+
 const getPosts = async () => {
   let posts = "";
   try {

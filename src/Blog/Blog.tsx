@@ -9,6 +9,9 @@ export type BlogPost = {
   content: string;
   id: number;
 };
+const reqUrl: string = import.meta.env.VITE_REQ_URL;
+
+console.log(`${reqUrl}people`);
 
 console.log(entries);
 export const Blog: FC = () => {
