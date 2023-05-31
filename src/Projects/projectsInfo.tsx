@@ -2,6 +2,7 @@ import peka from "/images/peka.png";
 import poe from "/images/poe.png";
 import talents from "/images/talents.png";
 import memes from "/images/memes.png";
+import findOpen from "/images/findOpen.png";
 
 const projectsInfo: Array<any> = [
   {
@@ -12,6 +13,15 @@ const projectsInfo: Array<any> = [
     description:
       "Simple network for people planting in their gardens to share plants, seeds, trade, and talk about their craft.",
     live: "https://peka.ares.uy/",
+  },
+  {
+    name: "Find Open",
+    img: findOpen,
+    tools: "Typescript, NextJS, CSS, several APIs",
+    code: "https://github.com/jinitsuga/find-open",
+    description:
+      "Best viewed on phone - (soon PWA) webapp mainly for travelers who want to find open businesses for things like food, lodging, or health",
+    live: "https://find-open.vercel.app/",
   },
   {
     name: "Talents share",
