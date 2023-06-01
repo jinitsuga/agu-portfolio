@@ -20,7 +20,7 @@ const projectsInfo: Array<any> = [
     tools: "Typescript, NextJS, CSS, several APIs",
     code: "https://github.com/jinitsuga/find-open",
     description:
-      "Best viewed on phone - (soon PWA) webapp mainly for travelers who want to find open businesses for things like food, lodging, or health",
+      "Best viewed on phone - (soon PWA) webapp mainly for travelers who want to find open businesses for things like food, lodging, or health. Results limited to places registered on Google Business.",
     live: "https://find-open.vercel.app/",
   },
   {
