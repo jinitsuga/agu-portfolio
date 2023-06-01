@@ -12,7 +12,7 @@ export const Contact: FC<Props> = ({ text }) => {
 
   const [validationMessage, setValidationMessage] = React.useState<string>("");
 
-  const [emailSent, setEmailSent] = React.useState(false);
+  const [emailSent, setEmailSent] = React.useState<boolean>(false);
 
   const { darkMode } = React.useContext(DarkModeContext);
 
@@ -62,7 +62,7 @@ export const Contact: FC<Props> = ({ text }) => {
       id="contact"
       className={`${
         darkMode ? "bg-black text-stone-50" : "bg-stone-100"
-      } flex flex-row justify-center items-center w-screen pb-12 `}
+      } flex flex-row justify-center items-center sm:w-screen pb-12 tinyScreen:w-[300px] `}
     >
       <form
         className="flex flex-col items-center justify-center"
@@ -72,7 +72,10 @@ export const Contact: FC<Props> = ({ text }) => {
         <span className="text-center">
           {validationMessage.length > 0 && validationMessage}
         </span>
-        <label className={`flex flex-col m-2 text-lg`} htmlFor="name">
+        <label
+          className={`flex flex-col m-2 tinyScreen:w-[280px] text-lg`}
+          htmlFor="name"
+        >
           {text.name}
           <input
             minLength={3}
@@ -89,7 +92,10 @@ export const Contact: FC<Props> = ({ text }) => {
             onChange={handleChange}
           />
         </label>
-        <label className="flex flex-col m-2 text-lg" htmlFor="name">
+        <label
+          className="flex flex-col m-2 tinyScreen:w-[280px] text-lg"
+          htmlFor="name"
+        >
           {text.email}
           <input
             className={`p-2 m-1 w-80 rounded focus:outline-none focus:ring   ${
@@ -104,7 +110,10 @@ export const Contact: FC<Props> = ({ text }) => {
             onChange={handleChange}
           />
         </label>
-        <label className="flex flex-col m-2 text-lg" htmlFor="name">
+        <label
+          className="flex flex-col m-2 tinyScreen:w-[280px] text-lg"
+          htmlFor="name"
+        >
           {text.message}
           <textarea
             maxLength={450}
