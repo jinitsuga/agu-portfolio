@@ -22,7 +22,7 @@ export const Project: FC<Props> = ({
 
   return (
     <div
-      className={`flex flex-col items-center justify-center p-4 rounded ${
+      className={`flex flex-col items-center justify-center p-4  bg-stone-800 rounded ${
         darkMode
           ? "hover:shadow-md hover:shadow-stone-100"
           : "hover:shadow-md hover:shadow-stone-900"

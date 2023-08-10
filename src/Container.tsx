@@ -24,7 +24,7 @@ export const Container: FC = () => {
     <div
       className={`${
         darkMode ? "bg-black" : "bg-stone-100"
-      } h-100% w-screen flex flex-col items-center justify-center`}
+      } h-full w-full flex flex-col items-center justify-center`}
     >
       {/* <Navbar text={language.navbar} /> */}
       <Info greeting={language.infoGreeting} text={language.info} />

@@ -62,7 +62,7 @@ export const Contact: FC<Props> = ({ text }) => {
       id="contact"
       className={`${
         darkMode ? "bg-black text-stone-50" : "bg-stone-100"
-      } flex flex-row justify-center items-center sm:w-screen pb-12 tinyScreen:w-[300px] `}
+      } flex flex-row justify-center items-center sm:w-full pb-12 tinyScreen:w-[300px] `}
     >
       <form
         className="flex flex-col items-center justify-center"

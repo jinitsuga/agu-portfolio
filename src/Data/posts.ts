@@ -22,4 +22,35 @@ export const entries = [
       Knowing the exact role that an API plays within a project, or the different ways of authenticating users are things that straight up just make you a better front-end dev, even if you’re not messing with the backend at all. 
       Finally, since I’m also about to jump into Next.js and the whole server components and SSR side of things, I’m sure having a better understanding of how fullstack apps work is gonna be of tremendous help.`,
   },
+  {
+    id: 3,
+    name: "Contributing to Open Source",
+    content: `I had previously contributed to a small project that was right at my level of knowledge, and potentially below. 
+    It felt easy, and I'd dare to say I got excited and modified their project too much (even if for the better). Regardless,
+    the people running the project were happy and grateful.
+    This initial first experience gave me a massive confident boost, taught me a lot about Github and working along others using
+    Git, sending a PR, having detailed commit messages, explaining the changes I'm proposing in the PR, and understanding
+    others' code.
+    
+    Enter Alveus. Alveus is a non profit animal sanctuary from the US, founded by Maya, and I've been following their stream for quite
+    some time now. Yes, I did say stream. This animal sanctuary combines different types of video content (Twitch, Youtube)
+    to educate people online, using certain rescued/exotic animals as "Ambassadors". They create tons of educational content on
+    a weekly basis, have a big website and their use of technology is extensive in almost everything they do. Recently, 
+    randomly browsing their website, I found a little Github icon, which of course I followed and to my surprise, it turned
+    out that their whole project is not only open sourced (the website, twitch extension, a chrome extension (?) and some sort of app),
+    but also built on the exact technology I had started learning a week back.
+
+    After having a "successful" first experience contributing, I quickly searched for an issue I could tackle and found one
+    I felt somewhat comfortable to grab. I commented, forked the repo, and as soon as I saw the instructions to set up
+    the project for local development, I began feeling out of my depth. And I was. Navigating a fairly complex project, 
+    built on a technology that was new to me proved to be quite the challenge. Despite all of this, I kept going strong
+    and I don't think I've ever learned as much from anything else I've done during my programming journey in such a compact,
+    arguably short, period of time. Just by grasping a general understanding of how this website works, I gain knowledge,
+    not to mention once I started building the part regarding my contribution. Adapting to a whole project's code structure,
+    linter rules, style rules and data types was the next big challenge. As a starter level developer who has imposter
+    syndrome without even having started their first job yet, working on this project humbled me towards the "I have
+    no idea what I'm doing" area even further, though after having the PR approved, my contribution existing in a real
+    project, all the effort invested simply felt incredible, even better than beating the hardest Souls boss ever.
+    `,
+  },
 ];

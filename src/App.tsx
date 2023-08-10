@@ -15,7 +15,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <div>
+      <div className="w-full">
         <Navbar />
         <Container />
       </div>
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
   },
   {
     element: (
-      <div>
+      <div className="w-full">
         <Navbar />
         <Blog />
       </div>

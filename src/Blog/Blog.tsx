@@ -47,7 +47,7 @@ export const Blog: FC = () => {
     <section
       className={`${
         darkMode ? "text-white" : "text-black"
-      }  " flex flex-col text-white w-screen h-screen items-center`}
+      }  " flex flex-col text-white w-full h-screen items-center`}
     >
       {!activePost ? (
         <div>
