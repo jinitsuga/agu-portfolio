@@ -4,8 +4,8 @@
     "blog": "pensamientos"
   },
   "infoGreeting": "Hola! Soy Agu.",
-  "info": "Desarrollador autodidacta, me gusta tanto el frontend como el backend. Me encanta aprender nuevos conceptos a través de su implementación y construyendo ideas divertidas. Podes encontrar todos mis proyectos en mi Github, y no dudes en ponerte en contacto si estás queriendo construir algo, hablar de código, o tal vez contratarme!",
-  "projects": "Algunos de mis proyectos:",
+  "info": "Desarrollador autodidacta, me encanta tanto el frontend como el backend. Amo aprender nuevos conceptos a través de su implementación y construyendo ideas divertidas (podes encontrar casi todo en mi Github). Charlemos!",
+  "projects": "Proyectos:",
   "form": {
     "title": "Escríbeme",
     "name": "Nombre",
