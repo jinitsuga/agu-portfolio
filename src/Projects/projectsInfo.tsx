@@ -1,13 +1,13 @@
-import peka from "/images/peka.png";
-import poe from "/images/poe.png";
-import talents from "/images/talents.png";
-import memes from "/images/memes.png";
-import findOpen from "/images/findOpen.png";
+import plants from "/images/plants.png";
+import poeitems from "/images/poeitems.png";
+import talenttree from "/images/talenttree.png";
+import memeguy from "/images/memeguy.png";
+import map from "/images/map.png";
 
 const projectsInfo: Array<any> = [
   {
     name: "Peka",
-    img: peka,
+    img: plants,
     tools: "React, JS, styled-components, Express",
     code: "https://github.com/jinitsuga/Peka-front",
     description:
@@ -16,16 +16,16 @@ const projectsInfo: Array<any> = [
   },
   {
     name: "Find Open",
-    img: findOpen,
+    img: map,
     tools: "Typescript, NextJS, CSS, several APIs",
     code: "https://github.com/jinitsuga/find-open",
     description:
-      "phone/webapp mainly for travelers who want to find open businesses for basics like food, lodging, or health. Results limited to places registered on Google Business.",
+      "Phone/webapp mainly for travelers who want to find open businesses for basics like food, lodging, or health. Limited to places registered on Google Business.",
     live: "https://find-open.vercel.app/",
   },
   {
     name: "Talents share",
-    img: talents,
+    img: talenttree,
     tools: "Typescript, React, TailwindCSS",
     code: "https://github.com/jinitsuga/share-talents",
     description:
@@ -34,7 +34,7 @@ const projectsInfo: Array<any> = [
   },
   {
     name: "Hidden objects - PoE",
-    img: poe,
+    img: poeitems,
     tools: "React, HTML&CSS, firebase",
     code: "https://github.com/jinitsuga/find-me",
     description:
@@ -44,7 +44,7 @@ const projectsInfo: Array<any> = [
 
   {
     name: "Memes Store",
-    img: memes,
+    img: memeguy,
     tools: "React, HTML, CSS",
     code: "https://github.com/jinitsuga/shopping-cart",
     description:

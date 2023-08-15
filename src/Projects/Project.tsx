@@ -22,10 +22,10 @@ export const Project: FC<Props> = ({
 
   return (
     <div
-      className={`flex items-center justify-center p-1 gap-4 h-[315px] w-[500px] m-1 border-white border-2 rounded`}
+      className={`flex items-center justify-center gap-4 h-[315px] w-[500px] m-1 border-white border-2 rounded`}
     >
-            <img className="max-w-[50%] h-full mb-2" src={img}></img>
-    <div className="flex flex-col">
+            <img className="max-w-[50%] h-full" src={img}></img>
+    <div className="flex flex-col p-1">
       <h4 className="mb-2 text-xl">{name}</h4>
       <span className="m-1 text-sm">{tools}</span>
       <span className="max-w-[350px]">{description}</span>
