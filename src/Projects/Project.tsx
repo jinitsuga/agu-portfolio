@@ -27,9 +27,9 @@ export const Project: FC<Props> = ({
     >
     <img className="max-w-[50%] h-full" src={img}></img>
     <div className="flex gap-2 flex-col p-2">
-      <h4 className="mb-2 text-xl">{name}</h4>
+      <h4 className="mb-2 text-2xl text-cyan-400">{name}</h4>
       <div className=" flex gap-1 text-cyan-200 text-3xl">{tools}</div>
-      <span className="max-w-[350px]">{description}</span>
+      <span className="max-w-[350px] text-sm">{description}</span>
       <ul className="flex items-center justify-self-end gap-4 mt-2 text-xl">
         <li>
           <a target="_blank" href={code}>

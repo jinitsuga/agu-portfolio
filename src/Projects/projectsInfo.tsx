@@ -38,7 +38,7 @@ const projectsInfo: Array<any> = [
     live: "https://share-talents.netlify.app/",
   },
   {
-    name: "Hidden objects - PoE",
+    name: "Hidden objects",
     img: poeitems,
     key: 4,
     tools: [<IconLogoJavascript />, <IconReact />, <IconCss3 />, <IconFirebase />],
