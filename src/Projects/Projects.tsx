@@ -9,10 +9,10 @@ export const Projects: FC<Props> = ({ text }) => {
 
   // Renders all the projects contained within the projectsInfo file
 
-  const projects = projectsInfo.map((project, index) => {
+  const projects = projectsInfo.map((project, id) => {
     return (
       <Project
-        key={index}
+        key={id}
         name={project.name}
         description={project.description}
         img={project.img}

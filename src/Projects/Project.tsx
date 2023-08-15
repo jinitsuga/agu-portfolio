@@ -1,9 +1,10 @@
 import React, { FC } from "react";
 import { DarkModeContext } from "../Context/DarkMode";
+import {IconTypescript, IconNextjs} from "../icons/icons";
 
 interface Props {
   img: any;
-  tools: string;
+  tools: Array<any>;
   name: string;
   code: string;
   description: string;
@@ -22,18 +23,18 @@ export const Project: FC<Props> = ({
 
   return (
     <div
-      className={`flex items-center justify-center gap-4 h-[315px] w-[500px] m-1 border-white border-2 rounded`}
+      className={`flex items-center justify-center gap-4 h-[315px] w-[500px] m-1 shadow-sm shadow-white hover:shadow-cyan-400 rounded`}
     >
-            <img className="max-w-[50%] h-full" src={img}></img>
-    <div className="flex flex-col p-1">
+    <img className="max-w-[50%] h-full" src={img}></img>
+    <div className="flex gap-2 flex-col p-2">
       <h4 className="mb-2 text-xl">{name}</h4>
-      <span className="m-1 text-sm">{tools}</span>
+      <div className=" flex gap-1 text-cyan-200 text-3xl">{tools}</div>
       <span className="max-w-[350px]">{description}</span>
-      <ul className="flex justify-self-end gap-4 mt-2 text-xl">
+      <ul className="flex items-center justify-self-end gap-4 mt-2 text-xl">
         <li>
           <a target="_blank" href={code}>
             {darkMode ? (
-              <i className="devicon-github-original p-1 border-b-2 border-transparent hover:border-stone-100"></i>
+              <i className="devicon-github-original text-2xl p-1 border-b-2 border-transparent hover:border-stone-100"></i>
             ) : (
               <i className="devicon-github-original p-1 colored border-b-2 border-transparent hover:border-stone-900"></i>
             )}
