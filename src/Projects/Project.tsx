@@ -22,14 +22,11 @@ export const Project: FC<Props> = ({
 
   return (
     <div
-      className={`flex flex-col items-center justify-center p-4  bg-stone-800 rounded ${
-        darkMode
-          ? "hover:shadow-md hover:shadow-stone-100"
-          : "hover:shadow-md hover:shadow-stone-900"
-      }`}
+      className={`flex items-center justify-center p-1 gap-4 h-[315px] w-[500px] m-1 border-white border-2 rounded`}
     >
+            <img className="max-w-[50%] h-full mb-2" src={img}></img>
+    <div className="flex flex-col">
       <h4 className="mb-2 text-xl">{name}</h4>
-      <img className="sm:max-w-[275px] max-h-[200px] mb-2" src={img}></img>
       <span className="m-1 text-sm">{tools}</span>
       <span className="max-w-[350px]">{description}</span>
       <ul className="flex justify-self-end gap-4 mt-2 text-xl">
@@ -56,6 +53,7 @@ export const Project: FC<Props> = ({
           </a>
         </li>
       </ul>
+      </div>
     </div>
   );
 };
