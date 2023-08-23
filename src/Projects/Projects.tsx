@@ -39,7 +39,7 @@ export const Projects: FC<Props> = ({ text }) => {
       <div
         className={`${
           darkMode ? "text-stone-50" : ""
-        } flex flex-wrap justify-center items-center max-w-[80%]`}
+        } flex flex-wrap gap-8 justify-center items-center max-w-[80%]`}
       >
         {projects}
       </div>
