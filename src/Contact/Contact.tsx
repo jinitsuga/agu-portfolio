@@ -40,7 +40,7 @@ export const Contact: FC<Props> = ({ text }) => {
       return;
     }
 
-    send("service_8mm808s", "template_0dyjgbc", email, "m8Pr21PqFhbht7PhH")
+    send("service_j5yj7ar", "contact_form", email, "m8Pr21PqFhbht7PhH")
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
       })
