@@ -1,7 +1,7 @@
 {
   "navbar": {
     "connect": "conectemos",
-    "blog": "pensamientos"
+    "blog": "blog(?)"
   },
   "infoGreeting": "Hola! Soy Agu.",
   "info": "Profesor de inglés hecho dev, me encanta tanto el frontend como el backend. Amo aprender nuevos conceptos a través de su implementación y construyendo ideas divertidas (podes encontrar casi todo en mi Github). Charlemos!",

@@ -37,10 +37,10 @@ export const Navbar: FC = memo(({}) => {
     <nav
       className={`${
         darkMode ? " text-stone-50" : ""
-      } sticky top-0 z-20 flex flex-row w-100% justify-around items-center p-6 text-lg mb-8 backdrop-blur-[10px] backdrop-saturate-[1.8]
+      } sticky top-0 z-20 flex flex-row w-100% justify-around items-center p-2 lg:p-6 text-lg mb-8 backdrop-blur-[10px] backdrop-saturate-[1.8]
       `}
     >
-      <ul className="flex flex-col flex-wrap sm:flex-row gap-6 justify-between md:w-62 xs:max-w-xs">
+      <ul className="flex flex-wrap sm:flex-row gap-2 justify-between md:w-62 xs:max-w-xs mr-2">
         <li className="hover:text-cyan-200">
           <Link
             to="/"
@@ -76,7 +76,7 @@ export const Navbar: FC = memo(({}) => {
               darkMode ? "hover:border-cyan-200" : "hover:border-stone-900"
             }`}
           >
-            {lang == "EN" ? "thoughts" : "posts"}
+            {lang == "EN" ? '"blog"' : '"blog"'}
           </Link>
         </li>
         <li className="text-4xl text-stone-50 hover:text-cyan-400 ">
