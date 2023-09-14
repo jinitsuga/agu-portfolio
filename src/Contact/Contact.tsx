@@ -23,6 +23,7 @@ export const Contact: FC<Props> = ({ text }) => {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
+    setEmailSent(true);
 
     if (email.from.length < 3 || email.from.length > 16) {
       setValidationMessage(text.nameValidation);
@@ -57,8 +58,6 @@ export const Contact: FC<Props> = ({ text }) => {
       .catch((err) => {
         console.log("FAILED...", err);
       });
-
-    setEmailSent(true);
   };
 
   const handleChange = (e: any) => {
