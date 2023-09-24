@@ -50,6 +50,7 @@ export const Contact: FC<Props> = ({ text }) => {
       .catch((err) => {
         console.log("FAILED...", err);
       });
+
     await send("service_j5yj7ar", "thank_you", email, "m8Pr21PqFhbht7PhH")
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);

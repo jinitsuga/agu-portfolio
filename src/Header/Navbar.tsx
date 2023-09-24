@@ -40,7 +40,7 @@ export const Navbar: FC = memo(({}) => {
       } sticky top-0 z-20 flex flex-row w-100% justify-around items-center p-2 lg:p-6 text-lg mb-8 backdrop-blur-[10px] backdrop-saturate-[1.8]
       `}
     >
-      <ul className="flex flex-wrap sm:flex-row gap-2 justify-between md:w-62 xs:max-w-xs mr-2">
+      <ul className="flex flex-wrap sm:flex-row gap-6 justify-between md:w-62 xs:max-w-xs mr-2">
         <li className="hover:text-cyan-200">
           <Link
             to="/"
@@ -69,7 +69,7 @@ export const Navbar: FC = memo(({}) => {
             {lang == "EN" ? "message me" : "conectemos"}
           </Link>
         </li>
-        <li className="hover:text-cyan-200">
+        {/* <li className="hover:text-cyan-200">
           <Link
             to="/blog"
             className={`border-b-2 border-transparent hover:cursor-pointer ${
@@ -78,7 +78,7 @@ export const Navbar: FC = memo(({}) => {
           >
             {lang == "EN" ? '"blog"' : '"blog"'}
           </Link>
-        </li>
+        </li> */}
         <li className="text-4xl text-stone-50 hover:text-cyan-400 ">
           <a
             className={`${
@@ -111,7 +111,7 @@ export const Navbar: FC = memo(({}) => {
           )}
         </button>
         <button
-          className={`mr-2 m-2 p-2 ${
+          className={`mr-2 m-2 p-2 text-sm md:text-xl ${
             darkMode ? "ring-stone-50" : "ring-stone-900"
           }  ${lang == "EN" ? "ring" : ""}`}
           disabled={lang == "EN" ? true : false}

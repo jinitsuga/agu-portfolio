@@ -13,7 +13,7 @@ export const Info: FC<Props> = ({ text, greeting }) => {
     <section
       className={`${
         darkMode ? "bg-black text-stone-50" : "bg-stone-100"
-      } flex flex-row w-3/4 sm:w-3/4 justify-around`}
+      } flex flex-row w-[85%] md:w-3/4 justify-around`}
     >
       <div className="flex flex-col p-6 text-lg w-[560px]  z-10">
         <h3
@@ -40,7 +40,7 @@ export const Info: FC<Props> = ({ text, greeting }) => {
                   : "p-1 border-b-2 border-transparent "
               }`}
             >
-              Grab CV ↓{" "}
+              CV ⬇{" "}
             </a>
           </li>
           <li className="text-4xl text-stone-50">
