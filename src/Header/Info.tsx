@@ -25,7 +25,7 @@ export const Info: FC<Props> = ({ text, greeting }) => {
         </h3>
         <p>{text}</p>
         <ul className="flex flex-row gap-4 justify-self-center text-xl  self-center m-4">
-          <li
+          {/* <li
             className={`${
               darkMode
                 ? "text-cyan-300 border-cyan-300 hover:border-white hover:text-white"
@@ -42,7 +42,7 @@ export const Info: FC<Props> = ({ text, greeting }) => {
             >
               CV ⬇{" "}
             </a>
-          </li>
+          </li> */}
           <li className="text-4xl text-stone-50">
             <a
               className={`${
