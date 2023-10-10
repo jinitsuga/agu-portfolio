@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { DarkModeContext } from "../Context/DarkMode";
+import resume from "/cv/ibanez_EN.pdf";
 
 interface Props {
   text: string;
@@ -25,7 +26,7 @@ export const Info: FC<Props> = ({ text, greeting }) => {
         </h3>
         <p>{text}</p>
         <ul className="flex flex-row gap-4 justify-self-center text-xl  self-center m-4">
-          {/* <li
+          <li
             className={`${
               darkMode
                 ? "text-cyan-300 border-cyan-300 hover:border-white hover:text-white"
@@ -33,16 +34,17 @@ export const Info: FC<Props> = ({ text, greeting }) => {
             } "text-md  border-2 rounded text-center flex items-center justify-center p-1 "`}
           >
             <a
-              href=""
+              href="/cv/ibanez_EN.pdf"
+              download={"Download cv"}
               className={`${
                 darkMode
                   ? "p-1 border-b-2 border-transparent "
                   : "p-1 border-b-2 border-transparent "
               }`}
             >
-              CV ⬇{" "}
+              <button>CV ⬇</button>
             </a>
-          </li> */}
+          </li>
           <li className="text-4xl text-stone-50">
             <a
               className={`${
