@@ -35,7 +35,7 @@ export const Info: FC<Props> = ({ text, greeting }) => {
           >
             <a
               href="/cv/ibanez_EN.pdf"
-              download={"Download cv"}
+              download={"ibanez_EN.pdf"}
               className={`${
                 darkMode
                   ? "p-1 border-b-2 border-transparent "
