@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { DarkModeContext } from "../Context/DarkMode";
+import { LanguageContext } from "../Context/Language";
 import resume from "/cv/ibanez_EN.pdf";
 
 interface Props {
@@ -9,6 +10,7 @@ interface Props {
 
 export const Info: FC<Props> = ({ text, greeting }) => {
   const { darkMode } = React.useContext(DarkModeContext);
+  const { lang } = React.useContext(LanguageContext);
 
   return (
     <section
@@ -34,8 +36,8 @@ export const Info: FC<Props> = ({ text, greeting }) => {
             } "text-md  border-2 rounded text-center flex items-center justify-center p-1 "`}
           >
             <a
-              href="/cv/ibanez_EN.pdf"
-              download={"ibanez_EN.pdf"}
+              href={lang === "EN" ? "/cv/ibanez_EN.pdf" : "/cv/ibanez_ES.pdf"}
+              download={lang === "EN" ? "ibanez_EN.pdf" : "ibanez_ES.pdf"}
               className={`${
                 darkMode
                   ? "p-1 border-b-2 border-transparent "
