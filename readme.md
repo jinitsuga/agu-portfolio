@@ -10,10 +10,3 @@ Getting some more Typescript and Tailwind practice as I buit it. Also, adding da
 #### Some of the learnings
 
 As I was exploring multi-language possibilities, investigating about dynamic and conditional imports in particular (so I could import the necessary json file for the selected language depending on route or context) made me land on React.lazy, dynamic imports and code splitting. Found these super interesting to think about, especially seeing how much control one actually has over the way things are bundled and how code is split and rendered to the user in chunks. I'll definitely start trying to take these into account now on my future projects, since performance and optimization are topics that wake up my curiosity.
-
-#### Posts/thoughts/blog addition
-
-re-structured page, included router and react memo. Why? To practice some backend concepts that I was learning, thought I'd incorporate them into an already working thing.
-Tested React Router loader and React Query for passing data to the blog but ended up going with a simple useEffect for now - I was over-engineering a simple thing to prevent the issue of re-requesting the blog data from the database every time the route is revisited, but this fix most likely needs to come from the backend/API
-
-Found out that React.StrictMode (dev only feature) re-renders the entire app (drove me nuts) !!!!!!!!!!!!!!
