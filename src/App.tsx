@@ -21,15 +21,6 @@ const router = createBrowserRouter([
       </div>
     ),
   },
-  // {
-  //   element: (
-  //     <div className="w-full">
-  //       <Navbar />
-  //       <Blog />
-  //     </div>
-  //   ),
-  //   path: "/blog",
-  // },
 ]);
 
 function App() {

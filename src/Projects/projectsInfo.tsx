@@ -3,6 +3,17 @@ import poeitems from "/images/poeitems.png";
 import talenttree from "/images/talenttree.png";
 import memeguy from "/images/memeguy.png";
 import map from "/images/map.png";
+import mangotr from "/images/mangotr.jpeg";
+
+type Project = {
+  name: string;
+  img: typeof plants;
+  key: number;
+  tools: JSX.Element[];
+  code: string;
+  description: string;
+  live?: string;
+};
 
 import {
   IconNextjs,
@@ -15,7 +26,18 @@ import {
   IconFirebase,
 } from "../icons/icons";
 
-const projectsInfo: Array<any> = [
+const projectsInfo: Array<Project> = [
+  {
+    name: "Mango Tree",
+    img: mangotr,
+    key: 0,
+    tools: [<IconNodejs />, <IconLogoJavascript />],
+    code: "https://github.com/jinitsuga/Mango-Tree",
+    description:
+      "Discord bot simulating in-game tipping mechanics from Dota 2, and showing top live games to watch and learn.",
+    live: "https://github.com/jinitsuga/Mango-Tree",
+  },
+
   {
     name: "Peka",
     img: plants,
