@@ -32,7 +32,7 @@ export const Projects: FC<Props> = ({ text }) => {
       <h4
         className={`${
           darkMode ? "text-stone-50" : ""
-        } text-center text-3xl mt-6 mb-6 font-bold`}
+        } text-center text-2xl mt-6 mb-6 font-semibold`}
       >
         {text}
       </h4>
