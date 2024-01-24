@@ -54,13 +54,13 @@ const projectsInfo: Array<Project> = [
     live: "https://peka.ares.uy/",
   },
   {
-    name: "Find Open",
+    name: "Manejate",
     img: map,
     key: 2,
     tools: [<IconNextjs />, <IconReact />, <IconTypescript />, <IconCss3 />],
     code: "https://github.com/jinitsuga/find-open",
     description:
-      "Phone/webapp for travelers. Combines Geolocation and GoogleMaps API. Limited to places registered on Google Business.",
+      "Phone/webapp for travelers. Shows data of currently open places for food, lodging and health near you.",
     live: "https://find-open.vercel.app/",
   },
   {
