@@ -8,7 +8,7 @@ interface Props {
   name: string;
   code: string;
   description: string;
-  live: string;
+  live?: string;
 }
 
 export const Project: FC<Props> = ({
