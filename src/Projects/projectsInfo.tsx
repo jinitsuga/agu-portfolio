@@ -60,7 +60,7 @@ const projectsInfo: Array<Project> = [
     tools: [<IconNextjs />, <IconReact />, <IconTypescript />, <IconCss3 />],
     code: "https://github.com/jinitsuga/find-open",
     description:
-      "Phone/webapp for travelers. Shows data of currently open places for food, lodging and health near you.",
+      "Phone/webapp for travelers. Shows data of currently open places for food, lodging and health near you, and traces a route to them.",
     live: "https://find-open.vercel.app/",
   },
   {
